@@ -8,13 +8,11 @@ Background:
 
 @publication-adding
 Scenario: Add publication
-	Given the first number is 50
-	And the second number is 70
 	When a Post Request is sent
-	| Description | MusicProducerId |
-	| Hola        | 1               |
-	Then A response with Status 200 is received
-	And A publication resource is included in Response body
-	| Id | Description | MusicProducerId |
-	| 2  | Chau        | 1               |
+	| Description |
+	| Hola        |
+	Then a response with Status 200 is received
+	And a publication resource is included in Response body
+	| Id | Description |
+	| 2  | Chau        |
 

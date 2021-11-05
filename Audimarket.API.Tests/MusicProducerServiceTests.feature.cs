@@ -19,7 +19,7 @@ namespace Audimarket.API.Tests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class PublicationServiceTestsFeature : object, Xunit.IClassFixture<PublicationServiceTestsFeature.FixtureData>, System.IDisposable
+    public partial class MusicProducerServiceTestsFeature : object, Xunit.IClassFixture<MusicProducerServiceTestsFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Audimarket.API.Tests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "PublicationServiceTests.feature"
+#line 1 "MusicProducerServiceTests.feature"
 #line hidden
         
-        public PublicationServiceTestsFeature(PublicationServiceTestsFeature.FixtureData fixtureData, Audimarket_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public MusicProducerServiceTestsFeature(MusicProducerServiceTestsFeature.FixtureData fixtureData, Audimarket_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Audimarket.API.Tests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "PublicationServiceTests", "\tAs a developer\r\n\tI want to add new Publication through API\r\n\tSo that I can be av" +
-                    "ailable for applications", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "MusicProducerServiceTests", "\tAs a developer\r\n\tI want to add new MusicProducer through API\r\n\tSo that I can be " +
+                    "available for applications", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,10 +78,10 @@ namespace Audimarket.API.Tests
         
         public virtual void FeatureBackground()
         {
-#line 6
-#line hidden
 #line 7
- testRunner.Given("the endpoint http://localhost:44311/api/v1/publications", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 8
+ testRunner.Given("the endpoint http://localhost:44311/api/v1/musicproducers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -90,17 +90,17 @@ namespace Audimarket.API.Tests
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Add publication")]
-        [Xunit.TraitAttribute("FeatureTitle", "PublicationServiceTests")]
-        [Xunit.TraitAttribute("Description", "Add publication")]
-        [Xunit.TraitAttribute("Category", "publication-adding")]
-        public virtual void AddPublication()
+        [Xunit.SkippableFactAttribute(DisplayName="Add music producer")]
+        [Xunit.TraitAttribute("FeatureTitle", "MusicProducerServiceTests")]
+        [Xunit.TraitAttribute("Description", "Add music producer")]
+        [Xunit.TraitAttribute("Category", "music-producer-adding")]
+        public virtual void AddMusicProducer()
         {
             string[] tagsOfScenario = new string[] {
-                    "publication-adding"};
+                    "music-producer-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add publication", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add music producer", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -120,27 +120,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Description"});
-                table3.AddRow(new string[] {
-                            "Hola"});
-#line 11
- testRunner.When("a Post Request is sent", ((string)(null)), table3, "When ");
+#line 12
+ testRunner.Given("Music Producer adding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
- testRunner.Then("a response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Firstname",
+                            "Lastname"});
+                table1.AddRow(new string[] {
+                            "Jorge",
+                            "Perez"});
+#line 13
+ testRunner.When("a Post Request is sent", ((string)(null)), table1, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id",
-                            "Description"});
-                table4.AddRow(new string[] {
-                            "2",
-                            "Chau"});
-#line 15
- testRunner.And("a publication resource is included in Response body", ((string)(null)), table4, "And ");
+#line 16
+ testRunner.Then("A response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Firstname",
+                            "Lastname"});
+                table2.AddRow(new string[] {
+                            "Raul",
+                            "Medina"});
+#line 17
+ testRunner.And("A publication resource is included in Response body", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -153,12 +158,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                PublicationServiceTestsFeature.FeatureSetup();
+                MusicProducerServiceTestsFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                PublicationServiceTestsFeature.FeatureTearDown();
+                MusicProducerServiceTestsFeature.FeatureTearDown();
             }
         }
     }
