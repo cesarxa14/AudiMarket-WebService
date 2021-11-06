@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Domain",
+    "\\Domain\\Models",
+    "\\Persistence",
+    "\\Persistence\\Contexts",
+    "\\Persistence\\Repositories",
+    "\\Services"
+  ],
+  "SelectedNode": "\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}
