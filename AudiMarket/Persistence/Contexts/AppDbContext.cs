@@ -50,16 +50,29 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Publication>().Property(p => p.PublicationDate).IsRequired();
+
+            //Project
+            builder.Entity<Project>().ToTable("Project");
+            builder.Entity<Project>().HasKey(p => p.Id);
+            builder.Entity<Project>().Property(p => p.Name).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Project>().Property(p => p.Description).IsRequired().HasMaxLength(100);
+            builder.Entity<Project>().Property(p => p.Addeddate).IsRequired();
+
+            //PlayList
+            builder.Entity<PlayList>().ToTable("PlayList");
+            builder.Entity<PlayList>().HasKey(p => p.Id);
+            builder.Entity<PlayList>().Property(p => p.Addeddate).IsRequired();
             
-
-
-
-
 
             //RelationShips
             builder.Entity<Category>().HasMany(p => p.Products).WithOne(p => p.Category).HasForeignKey(p => p.CategoryId);
 
             builder.Entity<MusicProducer>().HasMany(p => p.Publications).WithOne(p => p.MusicProducer).HasForeignKey(p => p.MusicProducerId);
+
+            builder.Entity<Project>().HasMany(p => p.MusicProducers).WithOne(p => p.Project).HasForeignKey(p => p.ProjectId);
+
+            builder.Entity<PlayList>().HasMany(p => p.Projects).WithOne(p => p.PlayList).HasForeignKey(p => p.PlayListId);
+
 
             // Seed Data
             builder.Entity<Category>().HasData
@@ -82,6 +95,19 @@ namespace AudiMarket.Persistence.Contexts
                     new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, IdProject = 1, MusicProducerId = 1}
                 );
 
+            //Projects
+
+             builder.Entity<Project>().HasData
+                (
+                    new Project { Id = 1, Name = "New Music", Description = "Nuevo gran exito del año", Addeddate = DateTime.Now, MusicProducerId = 1}
+                );
+
+            //PlayLists
+
+             builder.Entity<PlayList>().HasData
+                (
+                    new PlayList { Id = 1, Addeddate = DateTime.Now, ProjectId = 1}
+                );
 
 
             //Constraints
