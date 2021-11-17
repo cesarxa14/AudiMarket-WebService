@@ -51,7 +51,23 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Publication>().Property(p => p.PublicationDate).IsRequired();
             
-
+            //PlayList
+            builder.Entity<Publication>().ToTable("PlayList");
+            builder.Entity<Publication>().HasKey(p => p.Id);
+            builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
+            builder.Entity<Publication>().Property(p => p.AddedDate).IsRequired();
+            builder.Entity<Publication>().Property(p => p.MusicProducerId).IsRequired().ValueGeneratedOnAdd();
+            
+            //Project
+            builder.Entity<Publication>().ToTable("Project");
+            builder.Entity<Publication>().HasKey(p => p.Id);
+            builder.Entity<Publication>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Publication>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+            builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
+            builder.Entity<Publication>().Property(p => p.AddedDate).IsRequired();
+            builder.Entity<Publication>().Property(p => p.PlayListId).IsRequired().ValueGeneratedOnAdd();
+            
 
 
 
@@ -80,6 +96,20 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().HasData
                 (
                     new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, IdProject = 1, MusicProducerId = 1}
+                );
+
+            //PlayList
+
+             builder.Entity<PlayList>().HasData
+                (
+                    new PlayList { Id = 1, Description = "PlayList One", AddedDate = DateTime.Now, MusicProducerId = 1}
+                );
+
+            //Project
+
+            builder.Entity<Project>().HasData
+                (
+                    new Project { Id = 1, Description = "Name", Description = "Project One", AddedDate = DateTime.Now, PlayListId = 1}
                 );
 
 
