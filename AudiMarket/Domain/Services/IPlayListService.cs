@@ -9,6 +9,7 @@ namespace AudiMarket.Domain.Services
 {
     public interface IPlayListService
     {
+        Task<IEnumerable<PlayList>> GetAll();
         Task<IEnumerable<PlayList>> ListAsync();
         Task<IEnumerable<PlayList>> ListByMProducerId(int mProducerId);
         Task<PlayListResponse> SavePlayList(PlayList playList);

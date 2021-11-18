@@ -8,6 +8,7 @@ namespace AudiMarket.Domain.Repositories
 {
     public interface IProjectRepository
     {
+        Task<IEnumerable<Project>> GetAll();
         Task<IEnumerable<Project>> ListAsync();
         Task AddProject(Project project);
 

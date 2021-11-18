@@ -9,7 +9,8 @@ namespace AudiMarket.Domain.Services
 {
     public interface IProjectService
     {
-        Task<IEnumerable<Project>> ListAsync();
+        Task<IEnumerable<Project>> GetAll();
+        
         Task<IEnumerable<Project>> ListByPlayListId(int playListId);
         Task<ProjectResponse> SaveProject(Project project);
         Task<ProjectResponse> UpdateProject(int id, Project project);

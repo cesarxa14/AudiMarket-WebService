@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Domain.Models
 {
-    public class Publication
+    public class Project
     {
         public int Id { get; set; }
         public string Name { get; set; }

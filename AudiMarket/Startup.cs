@@ -49,7 +49,13 @@ namespace AudiMarket
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
 
-            
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IProjectService, ProjectService>();
+
+            services.AddScoped<IPlayListRepository, PlayListRepository>();
+            services.AddScoped<IPlayListService, PlayListService>();
+
+
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));

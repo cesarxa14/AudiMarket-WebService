@@ -1,6 +1,7 @@
 using AudiMarket.Domain.Models;
 using AudiMarket.Domain.Services;
-using using AudiMarket.Resources;
+using AudiMarket.Extensions;
+using AudiMarket.Resources;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -59,7 +60,7 @@ namespace AudiMarket.Controllers
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            var projectResource = _mapper.Map<Project, projectResource>(result.Resource);
+            var projectResource = _mapper.Map<Project, ProjectResource>(result.Resource);
             return Ok(projectResource);
 
         }
@@ -75,7 +76,7 @@ namespace AudiMarket.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var result = await _projectService.DeleteProject(id);
+            var result = await _projectService.RemoveProject(id);
 
             if (!result.Success)
                 return BadRequest(result.Message);

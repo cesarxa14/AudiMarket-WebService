@@ -20,6 +20,11 @@ namespace AudiMarket.Services
             _playListRepository = playListRepository;
         }
 
+        public async Task<IEnumerable<PlayList>> GetAll()
+        {
+            return await _playListRepository.ListAsync();
+        }
+
         public async Task<IEnumerable<PlayList>> ListAsync()
         {
             return await _playListRepository.ListAsync();
@@ -94,7 +99,7 @@ namespace AudiMarket.Services
 
 
             existingPlayList.Description = playList.Description;
-            existingPlayList.PlayListDate = playList.PlayListDate;
+            existingPlayList.AddedDate = playList.AddedDate;
 
             try
             {

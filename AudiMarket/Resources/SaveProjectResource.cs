@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Resources
 {
-    public class SavePublicationResource
+    public class SaveProjectResource
     {
         [Required]
         [MaxLength(200)]

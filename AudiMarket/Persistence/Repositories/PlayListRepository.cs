@@ -33,6 +33,11 @@ namespace AudiMarket.Persistence.Repositories
                 .Include(p => p.MusicProducer).ToListAsync();
         }
 
+        public async Task<IEnumerable<PlayList>> GetAll()
+        {
+            return await _context.PlayLists.Include(p => p.MusicProducer).ToListAsync();
+        }
+
         public async Task<IEnumerable<PlayList>> ListAsync()
         {
             return await _context.PlayLists.Include(p => p.MusicProducer).ToListAsync();

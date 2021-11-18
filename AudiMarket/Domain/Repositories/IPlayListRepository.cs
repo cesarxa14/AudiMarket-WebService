@@ -9,6 +9,8 @@ namespace AudiMarket.Domain.Repositories
     public interface IPlayListRepository
     {
         Task<IEnumerable<PlayList>> ListAsync();
+
+        Task<IEnumerable<PlayList>> GetAll();
         Task AddPlayList(PlayList playList);
 
         Task<PlayList> FindById(int id);

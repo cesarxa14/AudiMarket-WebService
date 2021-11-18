@@ -15,9 +15,16 @@ namespace AudiMarket.Services
         private readonly IPlayListRepository _playListRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public ProjectService(IProjectRepository projectRepository)
+        public ProjectService(IProjectRepository projectRepository, IPlayListRepository playListRepository, IUnitOfWork unitOfWork)
         {
             _projectRepository = projectRepository;
+            _playListRepository = playListRepository;
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<IEnumerable<Project>> GetAll()
+        {
+            return await _projectRepository.GetAll();
         }
 
         public async Task<IEnumerable<Project>> ListAsync()
@@ -98,7 +105,7 @@ namespace AudiMarket.Services
 
 
             existingProject.Description = project.Description;
-            existingProject.ProjectDate = project.ProjectDate;
+            existingProject.AddedDate = project.AddedDate;
 
             try
             {

@@ -1,6 +1,7 @@
 using AudiMarket.Domain.Models;
 using AudiMarket.Domain.Services;
-using using AudiMarket.Resources;
+using AudiMarket.Extensions;
+using AudiMarket.Resources;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -59,7 +60,7 @@ namespace AudiMarket.Controllers
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            var playListResource = _mapper.Map<PlayList, playListResource>(result.Resource);
+            var playListResource = _mapper.Map<PlayList, PlayListResource>(result.Resource);
             return Ok(playListResource);
 
         }
@@ -75,7 +76,7 @@ namespace AudiMarket.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var result = await _playListService.DeletePlayList(id);
+            var result = await _playListService.RemovePlayList(id);
 
             if (!result.Success)
                 return BadRequest(result.Message);
