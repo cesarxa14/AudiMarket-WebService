@@ -30,7 +30,7 @@ namespace Audimarket.API.Tests
             _factory = factory;
         }
 
-        [Given(@"the Endpoint https://localhost:(.*)/api/publications is available")]
+        [Given(@"the endpoint https://localhost:(.*)/api/publications is available")]
         public void GivenTheEndpointHttpsLocalhostApiPublicationsIsAvailable(int port, int version)
         {
             _baseUri = new Uri($"https://localhost:{port}/api/v{version}/publications");

@@ -79,9 +79,9 @@ namespace Audimarket.API.Tests
         public virtual void FeatureBackground()
         {
 #line 7
-#line hidden
+ #line hidden
 #line 8
- testRunner.Given("the endpoint http://localhost:44311/api/v1/musicproducers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("the endpoint http://localhost:44311/api/v1/musicproducers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -100,8 +100,8 @@ namespace Audimarket.API.Tests
                     "music-producer-adding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add music producer", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 11
-this.ScenarioInitialize(scenarioInfo);
+#line 12
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -121,31 +121,44 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
-this.FeatureBackground();
-#line hidden
-#line 12
- testRunner.Given("Music Producer adding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
-                            "Lastname"});
+                            "Lastname",
+                            "Dni",
+                            "Entrydate",
+                            "User",
+                            "Password"});
                 table1.AddRow(new string[] {
                             "Jorge",
-                            "Perez"});
+                            "Perez",
+                            "25555",
+                            "15/10/2021",
+                            "cesarxa",
+                            "1234"});
 #line 13
- testRunner.When("a Post Request is sent", ((string)(null)), table1, "When ");
+  testRunner.When("a Music Producer Request is sent", ((string)(null)), table1, "When ");
 #line hidden
 #line 16
- testRunner.Then("A response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("A response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
-                            "Lastname"});
+                            "Lastname",
+                            "Dni",
+                            "Entrydate",
+                            "User",
+                            "Password"});
                 table2.AddRow(new string[] {
-                            "Raul",
-                            "Medina"});
+                            "Jorge",
+                            "Perez",
+                            "25555",
+                            "15/10/2021",
+                            "cesarxa",
+                            "1234"});
 #line 17
- testRunner.And("A publication resource is included in Response body", ((string)(null)), table2, "And ");
+  testRunner.And("A music producer resource is included in Response body", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
