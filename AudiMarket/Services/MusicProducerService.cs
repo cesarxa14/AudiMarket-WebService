@@ -44,6 +44,25 @@ namespace AudiMarket.Services
             return await _musicProducerRepository.GetAll();
         }
 
+        public async Task<MusicProducer> GetByUsernameAndPassword(string username, string password)
+        {/*
+            try
+            {
+                var existUser = await _musicProducerRepository.FindByUsernameAndPassword(username, password);
+                if(existUser != null)
+                {
+                    return existUser;
+                }
+
+                return null;
+
+            }
+            catch (Exception)
+            {
+
+            }*/
+            return null;
+        }
 
         public async Task<MusicProducerResponse> SaveMusicProducer(MusicProducer musicProducer)
         {
@@ -87,6 +106,9 @@ namespace AudiMarket.Services
             }
         }
 
-        
+        Task<MusicProducerResponse> IMusicProducerService.GetByUsernameAndPassword(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
