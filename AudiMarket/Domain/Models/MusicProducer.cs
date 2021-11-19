@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace AudiMarket.Domain.Models
@@ -13,6 +14,8 @@ namespace AudiMarket.Domain.Models
         public string Dni { get; set; }
         public DateTime Entrydate { get; set; }
         public string User { get; set; }
+
+        [JsonIgnore]
         public string Password { get; set; }
 
         //Relationships

@@ -1,4 +1,5 @@
 ﻿using AudiMarket.Domain.Models;
+using AudiMarket.Domain.Services.Communications;
 using AudiMarket.Resources;
 using AutoMapper;
 using System;
@@ -12,8 +13,8 @@ namespace AudiMarket.Mapping
     {
         public ModelToResourceProfile()
         {
-            CreateMap<Category, CategoryResource>();
             CreateMap<MusicProducer, MusicProducerResource>();
+            CreateMap<MusicProducer, AuthenticateResponse>();
             CreateMap<Publication, PublicationResource>();
         }
     }

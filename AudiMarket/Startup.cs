@@ -1,3 +1,6 @@
+using AudiMarket.Authorization.Handlers.Implementations;
+using AudiMarket.Authorization.Handlers.Interfaces;
+using AudiMarket.Authorization.Middleware;
 using AudiMarket.Domain.Repositories;
 using AudiMarket.Domain.Services;
 using AudiMarket.Persistence.Contexts;
@@ -32,7 +35,7 @@ namespace AudiMarket
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors();
             services.AddControllers();
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddDbContext<AppDbContext>(options =>
@@ -40,8 +43,8 @@ namespace AudiMarket
                 options.UseInMemoryDatabase("audimarket-api-in-memory");
             });
 
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IJwtHandler, JwtHandler>();
+
 
             services.AddScoped<IMusicProducerRepository, MusicProducerRepository>();
             services.AddScoped<IMusicProducerService, MusicProducerService>();
@@ -53,6 +56,7 @@ namespace AudiMarket
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
+            //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddSwaggerGen(c =>
             {
@@ -70,6 +74,14 @@ namespace AudiMarket
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AudiMarket v1"));
             }
+
+            app.UseCors(builder => builder
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowAnyOrigin());
+
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+            app.UseMiddleware<JwtMiddleware>();
 
             app.UseHttpsRedirection();
 

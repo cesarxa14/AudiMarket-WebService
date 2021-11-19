@@ -1,5 +1,7 @@
-﻿using AudiMarket.Domain.Models;
+﻿using AudiMarket.Attributes;
+using AudiMarket.Domain.Models;
 using AudiMarket.Domain.Services;
+using AudiMarket.Domain.Services.Communications;
 using AudiMarket.Extensions;
 using AudiMarket.Resources;
 using AutoMapper;
@@ -12,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [ApiController]
     [Route("/api/v1/[controller]")]
@@ -26,6 +29,7 @@ namespace AudiMarket.Controllers
             _mapper = mapper;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [SwaggerOperation(
             Summary = "Get all music producers", 
@@ -40,18 +44,19 @@ namespace AudiMarket.Controllers
             return musicProducers;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [SwaggerOperation(
             Summary = "Create a music producer",
             Description = "Create a new music producer",
             Tags = new[] { "Music Producers" })
         ]
-        public async Task<IActionResult> PostMusicProducer([FromBody] MusicProducerResource resource)
+        public async Task<IActionResult> PostMusicProducer([FromBody] SaveMusicProducerResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var musicProducer = _mapper.Map<MusicProducerResource, MusicProducer>(resource);
+            var musicProducer = _mapper.Map<SaveMusicProducerResource, MusicProducer>(resource);
             var result = await _musicProducerService.SaveMusicProducer(musicProducer);
 
             if (!result.Success)
@@ -62,18 +67,19 @@ namespace AudiMarket.Controllers
 
         }
 
+        [AllowAnonymous]
         [HttpPut("{id}")]
         [SwaggerOperation(
             Summary = "Update a music producer",
             Description = "Update music producer's data",
             Tags = new[] { "Music Producers" })
         ]
-        public async Task<IActionResult> PutMusicProducer([SwaggerParameter("Music Producer ID")] int id, [FromBody] MusicProducerResource resource)
+        public async Task<IActionResult> PutMusicProducer([SwaggerParameter("Music Producer ID")] int id, [FromBody] SaveMusicProducerResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var musicProducer = _mapper.Map<MusicProducerResource, MusicProducer>(resource);
+            var musicProducer = _mapper.Map<SaveMusicProducerResource, MusicProducer>(resource);
             var result = await _musicProducerService.UpdateMusicProducer(id, musicProducer);
 
             if (!result.Success)
@@ -84,6 +90,7 @@ namespace AudiMarket.Controllers
 
         }
 
+        [AllowAnonymous]
         [HttpDelete("{id}")]
         [SwaggerOperation(
             Summary = "Delete music producer",
@@ -100,6 +107,30 @@ namespace AudiMarket.Controllers
             var musicProducerResource = _mapper.Map<MusicProducer, MusicProducerResource>(result.Resource);
             return Ok(musicProducerResource);
 
+        }
+
+        [AllowAnonymous]
+        [HttpPost("auth/sign-in")]
+        public async Task<IActionResult> Authenticate(AuthenticateRequest request)
+        {
+            var response = await _musicProducerService.Authenticate(request);
+            return Ok(response);
+        }
+
+        [AllowAnonymous]
+        [HttpPost("auth/sign-up")]
+        public async Task<IActionResult> Register(RegisterRequest request)
+        {
+            await _musicProducerService.Register(request);
+            return Ok(new { message = "Registration succesful" });
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var user = await _musicProducerService.GetById(id);
+            var resource = _mapper.Map<MusicProducer, MusicProducerResource>(user);
+            return Ok(resource);
         }
     }
 }

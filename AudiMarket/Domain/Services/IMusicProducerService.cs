@@ -10,6 +10,10 @@ namespace AudiMarket.Domain.Services
     public interface IMusicProducerService
     {
         Task<IEnumerable<MusicProducer>> GetAll();
+
+        Task<AuthenticateResponse> Authenticate(AuthenticateRequest request);
+        Task Register(RegisterRequest request);
+        Task<MusicProducer> GetById(int id);
         Task<MusicProducerResponse> SaveMusicProducer(MusicProducer musicProducer);
 
         Task<MusicProducerResponse> UpdateMusicProducer(int id, MusicProducer musicProducer);

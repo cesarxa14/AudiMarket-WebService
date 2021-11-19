@@ -21,8 +21,7 @@ namespace AudiMarket.Resources
         public DateTime Entrydate { get; set; }
         [SwaggerSchema("Music producer user")]
         public string User { get; set; }
-        [SwaggerSchema("Music producer password")]
-        public string Password { get; set; }
+        
         
     }
 }
