@@ -123,34 +123,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Description"});
+                table3.AddRow(new string[] {
+                            "Hola"});
 #line 11
- testRunner.Given("the first number is 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("a Post Request is sent", ((string)(null)), table3, "When ");
 #line hidden
-#line 12
- testRunner.And("the second number is 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.Then("a response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Description",
-                            "MusicProducerId"});
-                table1.AddRow(new string[] {
-                            "Hola",
-                            "1"});
-#line 13
- testRunner.When("a Post Request is sent", ((string)(null)), table1, "When ");
-#line hidden
-#line 16
- testRunner.Then("A response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
-                            "Description",
-                            "MusicProducerId"});
-                table2.AddRow(new string[] {
+                            "Description"});
+                table4.AddRow(new string[] {
                             "2",
-                            "Chau",
-                            "1"});
-#line 17
- testRunner.And("A publication resource is included in Response body", ((string)(null)), table2, "And ");
+                            "Chau"});
+#line 15
+ testRunner.And("a publication resource is included in Response body", ((string)(null)), table4, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
