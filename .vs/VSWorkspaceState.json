@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AudiMarket",
+    "\\Audimarket.API.Tests",
+    "\\Audimarket.API.Tests\\bin\\Debug",
+    "\\AudiMarket\\obj\\Release\\net5.0",
+    "\\AudiMarket\\Persistence",
+    "\\AudiMarket\\Persistence\\Contexts",
+    "\\AudiMarket\\Persistence\\Repositories",
+    "\\AudiMarket\\Resources",
+    "\\AudiMarket\\Services"
+  ],
+  "SelectedNode": "\\AudiMarket\\Controllers\\MusicProducerPublications.cs",
+  "PreviewInSolutionExplorer": false
+}

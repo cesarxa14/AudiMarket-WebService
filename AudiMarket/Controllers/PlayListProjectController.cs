@@ -1,7 +1,7 @@
 using AudiMarket.Domain.Models;
 using AudiMarket.Domain.Services;
-using AudiMarket.Extensions;
 using AudiMarket.Resources;
+using AudiMarket.Extensions;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,31 +12,33 @@ using System.Threading.Tasks;
 namespace AudiMarket.Controllers
 {
     [ApiController]
-    [Route("/api/v1/[controller]")]
-    public class ProjectsController : ControllerBase
+    [Route("/api/v1/playlists/{playListId}/projects")]
+    public class PlayListProjectsController : ControllerBase
     {
         private readonly IProjectService _projectService;
         private readonly IMapper _mapper;
 
-        public ProjectsController(IProjectService projectService, IMapper mapper)
+        public PlayListProjectsController(IProjectService projectService, IMapper mapper)
         {
             _projectService = projectService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ProjectResource>> GetAllAsync()
+        public async Task<IEnumerable<ProjectResource>> GetAllByPlayList(int playListId)
         {
-            var projects = await _projectService.ListAsync();
+            var projects = await _projectService.ListByPlayListId(playListId);
             var resources = _mapper.Map<IEnumerable<Project>, IEnumerable<ProjectResource>>(projects);
             return resources;
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostProject([FromBody] SaveProjectResource resource)
+        public async Task<IActionResult> PostPlayList([FromBody] SaveProjectResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
+
+            //if(!ModelState)
 
             var project = _mapper.Map<SaveProjectResource, Project>(resource);
             var result = await _projectService.SaveProject(project);
@@ -46,7 +48,6 @@ namespace AudiMarket.Controllers
 
             var projectResource = _mapper.Map<Project, ProjectResource>(result.Resource);
             return Ok(projectResource);
-
 
         }
 

@@ -1,7 +1,7 @@
 using AudiMarket.Domain.Models;
 using AudiMarket.Domain.Services;
-using AudiMarket.Extensions;
 using AudiMarket.Resources;
+using AudiMarket.Extensions;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,31 +12,33 @@ using System.Threading.Tasks;
 namespace AudiMarket.Controllers
 {
     [ApiController]
-    [Route("/api/v1/[controller]")]
-    public class PlayListsController : ControllerBase
+    [Route("/api/v1/musicproducers/{musicProducerId}/playlists")]
+    public class MusicProducerPlayListsController : ControllerBase
     {
         private readonly IPlayListService _playListService;
         private readonly IMapper _mapper;
 
-        public PlayListsController(IPlayListService playListService, IMapper mapper)
+        public MusicProducerPlayListsController(IPlayListService playListService, IMapper mapper)
         {
             _playListService = playListService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<PlayListResource>> GetAllAsync()
+        public async Task<IEnumerable<PlayListResource>> GetAllByMusicProducer(int musicProducerId)
         {
-            var playLists = await _playListService.ListAsync();
+            var playLists = await _playListService.ListByMProducerId(musicProducerId);
             var resources = _mapper.Map<IEnumerable<PlayList>, IEnumerable<PlayListResource>>(playLists);
             return resources;
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostPlayList([FromBody] SavePlayListResource resource)
+        public async Task<IActionResult> PostMusicProducer([FromBody] SavePlayListResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
+
+            //if(!ModelState)
 
             var playList = _mapper.Map<SavePlayListResource, PlayList>(resource);
             var result = await _playListService.SavePlayList(playList);
@@ -47,13 +49,12 @@ namespace AudiMarket.Controllers
             var playListResource = _mapper.Map<PlayList, PlayListResource>(result.Resource);
             return Ok(playListResource);
 
-
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPlayList(int id, [FromBody] SavePlayListResource resource)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
             var playList = _mapper.Map<SavePlayListResource, PlayList>(resource);
