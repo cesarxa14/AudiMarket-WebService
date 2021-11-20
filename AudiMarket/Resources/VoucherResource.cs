@@ -10,7 +10,7 @@ namespace AudiMarket.Resources
 
         public int IdVoucher { get; set; }
         public DateTime CreateDate { get; set; }
-        public int IdPaymethod { get; set; }
+        public int IdPayMethod { get; set; }
         public int IdContract { get; set; }
     }
 }

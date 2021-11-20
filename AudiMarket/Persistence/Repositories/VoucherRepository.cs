@@ -23,20 +23,52 @@ namespace AudiMarket.Persistence.Repositories
         
         public async Task<Voucher> FindById(int id)
         {
+
             return await _context.Vouchers.FindAsync(id);
+
+           
+            /*   return await _context.Vouchers.Include(p => p.Contract)
+                   .FirstOrDefaultAsync(p => p.Id == id);
+                   */
+
         }
         
         /*
         public async Task<IEnumerable<Voucher>> FindByContractId(int ContractId)
         {
+<<<<<<< HEAD
             return await _context.Vouchers.
                 Where(p => p.ContractId == ContractId)
                 .Include(p => p.MusicProducer).ToListAsync();
-        }
-        */
-        public async Task<IEnumerable<Voucher>> ListAsync()
+||||||| 08fb197
+            return await _context.Vouchers.
+                Where(p => p.MusicProducerId == ContractId)
+                .Include(p => p.MusicProducer).ToListAsync();
+=======
+            return _context.Vouchers;
+            /*  return await _context.Vouchers.
+                  Where(p => p.ContractId == ContractId)
+                  .Include(p => p.Contract).ToListAsync();
+                  */
+
+       // }
+
+     
+
+
+        public async Task<IEnumerable<Voucher>> GetAll()
         {
             return await _context.Vouchers.ToListAsync();
+          //  return await _context.Vouchers.Include(p => p.Contract).ToGetAll();
+        }
+        
+
+        public async Task<IEnumerable<Voucher>> ListAsync()
+        {
+
+            return await _context.Vouchers.ToListAsync();
+
+            //  return await _context.Vouchers.Include(p => p.Contract).ToListAsync();
         }
 
         public void Remove(Voucher voucher)
@@ -49,10 +81,6 @@ namespace AudiMarket.Persistence.Repositories
             _context.Vouchers.Update(voucher);
         }
 
-        public async Task<IEnumerable<Voucher>> GetAll()
-        {
-            return await _context.Vouchers.ToListAsync();
-        }
 
         public Task AddAsync(Voucher voucher)
         {

@@ -12,7 +12,7 @@ namespace AudiMarket.Domain.Services
         Task<IEnumerable<PayMethod>> ListAsync();
         Task<PayMethodResponse> SaveAsync(PayMethod paymethop);
 
-        Task<PayMethodResponse> UpdateAsync(int id, PayMethod paymethop);
+        Task<PayMethodResponse> UpdateAsync(int id, PayMethod payMethop);
 
         Task<PayMethodResponse> DeleteAsync(int id);
 

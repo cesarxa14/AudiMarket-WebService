@@ -29,6 +29,8 @@ namespace AudiMarket.Controllers
         {
             var vouchers = await _voucherService.GetAll();
             var resources = _mapper.Map<IEnumerable<Voucher>, IEnumerable<VoucherResource>>(vouchers);
+       
+
             return resources;
         }
 

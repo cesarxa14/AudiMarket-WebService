@@ -13,7 +13,7 @@ namespace AudiMarket.Resources
         public DateTime CreateDate { get; set; }
 
         [Required]
-        public int IdPaymethod { get; set; }
+        public int IdPayMethod { get; set; }
 
         [Required]
         public int IdContract { get; set; }
