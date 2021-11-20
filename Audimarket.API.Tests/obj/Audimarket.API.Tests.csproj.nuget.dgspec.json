@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj": {}
+    "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj": {
+    "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj",
+        "projectUniqueName": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj",
         "projectName": "Audimarket.API.Tests",
-        "projectPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj",
-        "packagesPath": "C:\\Users\\CORFAMET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\Audimarket.API.Tests\\obj\\",
+        "projectPath": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\Audimarket.API.Tests\\Audimarket.API.Tests.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\Audimarket.API.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\CORFAMET\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj": {
-                "projectPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj"
+              "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {
+                "projectPath": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj"
               }
             }
           }
@@ -95,28 +96,32 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj": {
+    "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj",
+        "projectUniqueName": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
         "projectName": "AudiMarket",
-        "projectPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj",
-        "packagesPath": "C:\\Users\\CORFAMET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\obj\\",
+        "projectPath": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "E:\\App Web - Final\\AudiMarket-WebService-master\\AudiMarket-WebService\\AudiMarket\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\CORFAMET\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -191,7 +196,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

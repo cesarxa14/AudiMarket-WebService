@@ -27,8 +27,8 @@ namespace AudiMarket.Controllers
         [HttpGet]
         public async Task<IEnumerable<VoucherResource>> GetAllAsync()
         {
-            var vouchers = await _voucherService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Voucher>, IEnumerable<VoucherResource>>(vouchers);
+            var voucher = await _voucherService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<Voucher>, IEnumerable<VoucherResource>>(voucher);
             return resources;
         }
 
@@ -38,13 +38,13 @@ namespace AudiMarket.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var category = _mapper.Map<SaveVoucherResource, Voucher>(resource);
-            var result = await _voucherService.SaveAsync(voucher);
+            var voucher = _mapper.Map<SaveVoucherResource, Voucher>(resource);
+            var result = await _voucherService.SaveVoucher(voucher);
 
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            var categoryResource = _mapper.Map<Voucher, VoucherResource>(result.Resource);
+            var voucherResource = _mapper.Map<Voucher, VoucherResource>(result.Resource);
             return Ok(voucherResource);
 
         }
@@ -56,8 +56,8 @@ namespace AudiMarket.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var category = _mapper.Map<SaveVoucherResource, Voucher>(resource);
-            var result = await _voucherService.UpdateAsync(id, voucher);
+            var voucher = _mapper.Map<SaveVoucherResource, Voucher>(resource);
+            var result = await _voucherService.UpdateVoucher(id, voucher);
 
             if (!result.Success)
                 return BadRequest(result.Message);
@@ -70,12 +70,12 @@ namespace AudiMarket.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var result = await _voucherService.DeleteAsync(id);
+            var result = await _voucherService.DeleteVoucher(id);
 
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            var categoryResource = _mapper.Map<Voucher, VoucherResource>(result.Resource);
+            var voucherResource = _mapper.Map<Voucher, VoucherResource>(result.Resource);
             return Ok(voucherResource);
 
         }

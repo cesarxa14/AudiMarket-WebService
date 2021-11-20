@@ -37,8 +37,8 @@ namespace AudiMarket.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var payMethod = _mapper.Map<SavePayMethodResource, Category>(resource);
-            var result = await _payMethodService.SaveAsync(category);
+            var payMethod = _mapper.Map<SavePayMethodResource, PayMethod>(resource);
+            var result = await _payMethodService.SaveAsync(payMethod);
 
             if (!result.Success)
                 return BadRequest(result.Message);
@@ -60,7 +60,7 @@ namespace AudiMarket.Controllers
             if (!result.Success)
                 return BadRequest(result.Message);
 
-            var payMethodResource = _mapper.Map<PayMethod, PayMethodResource>(result.PayMethod);
+            var payMethodResource = _mapper.Map<PayMethod, PayMethodResource>(result.Resource);
             return Ok(payMethodResource);
 
         }

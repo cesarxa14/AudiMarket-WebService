@@ -9,8 +9,10 @@ namespace AudiMarket.Domain.Repositories
     public interface IVoucherRepository
     {
         Task<IEnumerable<Voucher>> GetAll();
+        
+        Task<IEnumerable<Voucher>> ListAsync();
 
-        Task AddAsync(Voucher voucher);
+        Task AddVoucher(Voucher voucher);
 
         Task<Voucher> FindById(int id);
 

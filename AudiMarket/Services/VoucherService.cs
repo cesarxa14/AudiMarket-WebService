@@ -19,19 +19,27 @@ namespace AudiMarket.Services
             _voucherRepository = voucherRepository;
         }
 
+        public async Task<IEnumerable<Voucher>> GetAll()
+        {
+            return await _voucherRepository.GetAll();
+
+        }
+        
         public async Task<IEnumerable<Voucher>> ListAsync()
         {
             return await _voucherRepository.ListAsync();
 
         }
+        
 
         public async Task<IEnumerable<Voucher>> ListByContractId(int contractId)
         {
-            return await _voucherRepository.FindByContractId(contractId);
+            return await _voucherRepository.ListAsync();
+           // return await _voucherRepository.FindByContractId(contractId);
 
         }
 
-        public async Task<voucherResponse> RemoveVoucher(int id)
+        public async Task<VoucherResponse> DeleteVoucher(int id)
         {
             var existingVoucher = await _voucherRepository.FindById(id);
 
@@ -54,6 +62,8 @@ namespace AudiMarket.Services
 
         public async Task<VoucherResponse> SaveVoucher(Voucher voucher)
         {
+            return new VoucherResponse(voucher);
+            /*
             var existingContractId = _contractRepository.FindById(voucher.Id);
 
             if (existingContractId == null)
@@ -71,11 +81,14 @@ namespace AudiMarket.Services
             {
                 return new VoucherResponse($"An error ocurred while saving the voucher: {e.Message}");
             }
+            */
 
         }
 
         public async Task<VoucherResponse> UpdateVoucher(int id, Voucher voucher)
         {
+            return new VoucherResponse(voucher);
+            /*
             var existingVoucher = await _voucherRepository.FindById(voucher.Id);
 
             if (existingVoucher == null)
@@ -100,6 +113,7 @@ namespace AudiMarket.Services
             {
                 return new VoucherResponse($"An error ocurred while updating the voucher: {e.Message}");
             }
+            */
 
         }
     }

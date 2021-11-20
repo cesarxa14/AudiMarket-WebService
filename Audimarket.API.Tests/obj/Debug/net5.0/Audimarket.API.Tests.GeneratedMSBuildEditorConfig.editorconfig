@@ -7,8 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Audimarket.API.Tests
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\
-=======
-build_property.ProjectDir = E:\App Web - Final\AudiMarket-WebService-master\Audimarket.API.Tests\
->>>>>>> 8f9633050124eedbdd35075968b1917572632f6b
+build_property.ProjectDir = E:\App Web - Final\AudiMarket-WebService-master\AudiMarket-WebService\Audimarket.API.Tests\

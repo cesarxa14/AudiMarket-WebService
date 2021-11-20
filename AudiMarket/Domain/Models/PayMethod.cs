@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Domain.Models
 {
-    public partial class PayMethods
+    public class PayMethod
     {
         public int IdPayMethod { get; set; }
         public string Name { get; set; }

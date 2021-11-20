@@ -52,7 +52,7 @@ namespace AudiMarket.Services
                 await _payMethodRepository.AddAsync(payMethod);
                 await _unitOfWork.CompleteAsync();
 
-                return new PayMethodResponse(category);
+                return new PayMethodResponse(payMethod);
             }
             catch (Exception e)
             {
@@ -61,7 +61,7 @@ namespace AudiMarket.Services
             }
         }
 
-        public async Task<PayMethodResponse> UpdateAsync(int id, PayMethodService payMethod)
+        public async Task<PayMethodResponse> UpdateAsync(int id, PayMethod payMethod)
         {
             var existingPayMethod = await _payMethodRepository.FindById(id);
             if (existingPayMethod == null)
