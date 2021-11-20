@@ -19,19 +19,30 @@ namespace AudiMarket.Services
             _voucherRepository = voucherRepository;
         }
 
+        public Task<VoucherResponse> DeleteVoucher(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Voucher>> GetAll()
+        {
+            return await _voucherRepository.GetAll();
+        }
+
         public async Task<IEnumerable<Voucher>> ListAsync()
         {
-            return await _voucherRepository.ListAsync();
+            return await _voucherRepository.GetAll();
 
         }
 
         public async Task<IEnumerable<Voucher>> ListByContractId(int contractId)
         {
-            return await _voucherRepository.FindByContractId(contractId);
+            //return await _voucherRepository.FindByContractId(contractId);
+            return null;
 
         }
 
-        public async Task<voucherResponse> RemoveVoucher(int id)
+        public async Task<VoucherResponse> RemoveVoucher(int id)
         {
             var existingVoucher = await _voucherRepository.FindById(id);
 
@@ -54,15 +65,15 @@ namespace AudiMarket.Services
 
         public async Task<VoucherResponse> SaveVoucher(Voucher voucher)
         {
-            var existingContractId = _contractRepository.FindById(voucher.Id);
+           // var existingContractId = _contractRepository.FindById(voucher.Id);
 
-            if (existingContractId == null)
-                return new VoucherResponse("Invalid Contract");
+           // if (existingContractId == null)
+               // return new VoucherResponse("Invalid Contract");
 
 
             try
             {
-                await _voucherRepository.AddVoucher(voucher);
+                await _voucherRepository.AddAsync(voucher);
                 await _unitOfWork.CompleteAsync();
 
                 return new VoucherResponse(voucher);
@@ -82,10 +93,10 @@ namespace AudiMarket.Services
                 return new VoucherResponse("Voucher not found");
 
 
-            var existingContract = await _contractRepository.FindById(voucher.ContractId);
+            //var existingContract = await _contractRepository.FindById(voucher.ContractId);
 
-            if (existingContract == null)
-                return new VoucherResponse("Contract not found");
+            //if (existingContract == null)
+                //return new VoucherResponse("Contract not found");
 
 
             existingVoucher.CreateDate = voucher.CreateDate;
@@ -98,7 +109,7 @@ namespace AudiMarket.Services
             }
             catch (Exception e)
             {
-                return new PublicationVoucher($"An error ocurred while updating the voucher: {e.Message}");
+                return new VoucherResponse($"An error ocurred while updating the voucher: {e.Message}");
             }
 
         }

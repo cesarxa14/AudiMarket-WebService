@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Domain.Models
 {
-    public partial class Vouchers
+    public partial class Voucher
     {
         public int Id { get; set; }
         public DateTime CreateDate { get; set; }
@@ -15,6 +15,6 @@ namespace AudiMarket.Domain.Models
 
         //Relationships
         public int ContractId { get; set; }
-        public ContractId ContractId { get; set; }
+        //public ContractId ContractId { get; set; }
     }
 }

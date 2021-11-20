@@ -1,0 +1,28 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AudiMarket",
+    "\\AudiMarket\\Domain",
+<<<<<<< HEAD
+    "\\AudiMarket\\Domain\\Models",
+    "\\AudiMarket\\Domain\\Repositories",
+    "\\AudiMarket\\Domain\\Services",
+    "\\AudiMarket\\Domain\\Services\\Communications",
+    "\\AudiMarket\\Extensions",
+    "\\AudiMarket\\Mapping",
+    "\\AudiMarket\\Properties"
+  ],
+  "SelectedNode": "\\AudiMarket\\Domain\\Models\\PlayList.cs",
+=======
+    "\\AudiMarket\\Domain\\Services",
+    "\\AudiMarket\\Domain\\Services\\Communications",
+    "\\AudiMarket\\obj",
+    "\\AudiMarket\\obj\\Debug",
+    "\\AudiMarket\\obj\\Release",
+    "\\AudiMarket\\Persistence",
+    "\\AudiMarket\\Persistence\\Repositories"
+  ],
+  "SelectedNode": "\\AudiMarket\\Startup.cs",
+>>>>>>> 8f9633050124eedbdd35075968b1917572632f6b
+  "PreviewInSolutionExplorer": false
+}

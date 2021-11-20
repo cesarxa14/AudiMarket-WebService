@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Resources
 {
-    public class SaveVourcherResource
+    public class SaveVoucherResource
     {
         [Required]
         public int Id { get; set; }

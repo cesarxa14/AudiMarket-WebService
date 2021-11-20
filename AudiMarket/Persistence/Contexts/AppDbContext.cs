@@ -10,15 +10,16 @@ namespace AudiMarket.Persistence.Contexts
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
+        
         public DbSet<MusicProducer> MusicProducers { get; set; }
-
-        public DbSet<Publication> Publications { get; set; }
-
         public DbSet<Project> Projects { get; set; }
 
         public DbSet<PlayList> PlayLists { get; set; }
+
+        public DbSet<Voucher> Vouchers { get; set; }
+        public DbSet<PayMethod> PayMethods  { get; set; }
+
+        public DbSet<Publication> Publications { get; set; }
 
 
         public AppDbContext(DbContextOptions options) : base(options)
@@ -55,23 +56,7 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Publication>().Property(p => p.PublicationDate).IsRequired();
             
-            //PlayList
-            builder.Entity<PlayList>().ToTable("PlayList");
-            builder.Entity<PlayList>().HasKey(p => p.Id);
-            builder.Entity<PlayList>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<PlayList>().Property(p => p.Description).IsRequired().HasMaxLength(100);
-            builder.Entity<PlayList>().Property(p => p.AddedDate).IsRequired();
-            builder.Entity<PlayList>().Property(p => p.MusicProducerId).IsRequired().ValueGeneratedOnAdd();
-            
-            //Project
-            builder.Entity<Project>().ToTable("Project");
-            builder.Entity<Project>().HasKey(p => p.Id);
-            builder.Entity<Project>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Project>().Property(p => p.Name).IsRequired().HasMaxLength(100);
-            builder.Entity<Project>().Property(p => p.Description).IsRequired().HasMaxLength(100);
-            builder.Entity<Project>().Property(p => p.AddedDate).IsRequired();
-            builder.Entity<Project>().Property(p => p.PlayListId).IsRequired().ValueGeneratedOnAdd();
-            
+
 
 
 
@@ -100,20 +85,6 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().HasData
                 (
                     new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, IdProject = 1, MusicProducerId = 1}
-                );
-
-            //PlayList
-
-             builder.Entity<PlayList>().HasData
-                (
-                    new PlayList { Id = 1, Description = "PlayList One", AddedDate = DateTime.Now, MusicProducerId = 1}
-                );
-
-            //Project
-
-            builder.Entity<Project>().HasData
-                (
-                    new Project { Id = 1, Name = "Name", Description = "Project One", AddedDate = DateTime.Now, PlayListId = 1}
                 );
 
 

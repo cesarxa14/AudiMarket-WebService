@@ -26,11 +26,6 @@ namespace AudiMarket.Persistence.Repositories
         }
 
 
-        public async Task<MusicProducer> FindByUsernameAndPassword(string username, string password)
-        {
-            return _context.MusicProducers.Where(mp => mp.User == username && mp.Password == password).FirstOrDefault();
-        }
-
         public async Task<IEnumerable<MusicProducer>> GetAll()
         {
             return await _context.MusicProducers.ToListAsync();

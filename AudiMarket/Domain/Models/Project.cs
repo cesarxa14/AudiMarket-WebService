@@ -14,6 +14,6 @@ namespace AudiMarket.Domain.Models
 
         //Relationships
         public int PlayListId { get; set; }
-        public MusicProducer PlayList { get; set; }
+        public PlayList PlayList { get; set; }
     }
 } 

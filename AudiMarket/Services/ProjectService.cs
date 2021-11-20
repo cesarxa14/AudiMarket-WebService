@@ -82,10 +82,6 @@ namespace AudiMarket.Services
                 return new ProjectResponse($"An error ocurred while saving the project: {e.Message}");
             }
 
-
-
-
-
         }
 
         public async Task<ProjectResponse> UpdateProject(int id, Project project)

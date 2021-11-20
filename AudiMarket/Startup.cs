@@ -46,24 +46,21 @@ namespace AudiMarket
             services.AddScoped<IMusicProducerRepository, MusicProducerRepository>();
             services.AddScoped<IMusicProducerService, MusicProducerService>();
 
+            services.AddScoped<IPayMethodRepository, PayMethodRepository>();
+            services.AddScoped<IPayMethodService, PayMethodService>();
+
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
 
-            services.AddScoped<IProjectRepository, ProjectRepository>();
-            services.AddScoped<IProjectService, ProjectService>();
-
-            services.AddScoped<IPlayListRepository, PlayListRepository>();
-            services.AddScoped<IPlayListService, PlayListService>();
-
-
+            services.AddScoped<IVoucherRepository, VoucherRepository>();
+            services.AddScoped<IVoucherService, VoucherService>();
+            
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AudiMarket", Version = "v1" });
-                c.EnableAnnotations();
             });
         }
 

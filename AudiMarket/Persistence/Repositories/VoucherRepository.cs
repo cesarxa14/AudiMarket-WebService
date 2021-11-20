@@ -17,25 +17,26 @@ namespace AudiMarket.Persistence.Repositories
 
         public async Task AddVoucher(Voucher voucher)
         {
-            await _context.Voucher.AddAsync(voucher);
+            await _context.Vouchers.AddAsync(voucher);
         }
 
+        
         public async Task<Voucher> FindById(int id)
         {
-            return await _context.Vouchers.Include(p => p.Contract)
-                .FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Vouchers.FindAsync(id);
         }
-
+        
+        /*
         public async Task<IEnumerable<Voucher>> FindByContractId(int ContractId)
         {
             return await _context.Vouchers.
-                Where(p => p.MusicProducerId == ContractId)
+                Where(p => p.ContractId == ContractId)
                 .Include(p => p.MusicProducer).ToListAsync();
         }
-
+        */
         public async Task<IEnumerable<Voucher>> ListAsync()
         {
-            return await _context.Vouchers.Include(p => p.Contract).ToListAsync();
+            return await _context.Vouchers.ToListAsync();
         }
 
         public void Remove(Voucher voucher)
@@ -46,6 +47,16 @@ namespace AudiMarket.Persistence.Repositories
         public void Update(Voucher voucher)
         {
             _context.Vouchers.Update(voucher);
+        }
+
+        public Task<IEnumerable<Voucher>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(Voucher voucher)
+        {
+            throw new NotImplementedException();
         }
     }
 }
