@@ -77,5 +77,13 @@ namespace AudiMarket.Controllers
             var publicationResource = _mapper.Map<Publication, PublicationResource>(result.Resource);
             return Ok(publicationResource);
         }
+
+        [HttpGet("{musicProducerID}")]
+        public async Task<IEnumerable<PublicationResource>> GetByIdMProducer(int id)
+        {
+            var pubs = await _publicationService.ListByMProducerId(id);
+            var resource = _mapper.Map<IEnumerable<Publication>, IEnumerable<PublicationResource>>(pubs);
+            return resource;
+        }
     }
 }

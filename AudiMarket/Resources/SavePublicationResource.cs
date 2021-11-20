@@ -8,9 +8,7 @@ namespace AudiMarket.Resources
 {
     public class SavePublicationResource
     {
-        [Required]
-        public int ProjectId { get; set; }
-
+      
         [Required]
         public int MusicProducerId { get; set; }
 

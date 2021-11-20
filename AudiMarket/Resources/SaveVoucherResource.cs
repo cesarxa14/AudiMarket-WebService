@@ -8,8 +8,6 @@ namespace AudiMarket.Resources
 {
     public class SaveVoucherResource
     {
-        [Required]
-        public int Id { get; set; }
 
         [Required]
         public DateTime CreateDate { get; set; }

@@ -25,11 +25,11 @@ namespace AudiMarket.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<PlayListResource>> GetAllAsync()
+        public async Task<IEnumerable<PlayList>> GetAllAsync()
         {
             var playLists = await _playListService.ListAsync();
             var resources = _mapper.Map<IEnumerable<PlayList>, IEnumerable<PlayListResource>>(playLists);
-            return resources;
+            return playLists;
         }
 
         [HttpPost]
@@ -75,6 +75,14 @@ namespace AudiMarket.Controllers
 
             var playListResource = _mapper.Map<PlayList, PlayListResource>(result.Resource);
             return Ok(playListResource);
+        }
+
+        [HttpGet("{musicProducerID}")]
+        public async Task<IEnumerable<PlayListResource>> GetByIdMProducer(int id)
+        {
+            var playLists = await _playListService.ListByMProducerId(id);
+            var resource = _mapper.Map<IEnumerable<PlayList>, IEnumerable<PlayListResource>>(playLists);
+            return resource;
         }
     }
 }

@@ -24,13 +24,13 @@ namespace AudiMarket.Services
 
         public async Task<IEnumerable<PlayList>> GetAll()
         {
-            return await _playListRepository.ListAsync();
+            return await _playListRepository.GetAll();
         }
 
         public async Task<IEnumerable<PlayList>> ListAsync()
         {
             return await _playListRepository.ListAsync();
-
+            throw new System.NotImplementedException();
         }
 
         public async Task<IEnumerable<PlayList>> ListByMProducerId(int mProducerId)

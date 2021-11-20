@@ -61,6 +61,7 @@ namespace AudiMarket
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AudiMarket", Version = "v1" });
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
         }
 
@@ -79,6 +80,7 @@ namespace AudiMarket
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseDeveloperExceptionPage();
 
             app.UseEndpoints(endpoints =>
             {

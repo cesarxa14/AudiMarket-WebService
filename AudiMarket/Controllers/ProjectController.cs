@@ -75,5 +75,13 @@ namespace AudiMarket.Controllers
             var projectResource = _mapper.Map<Project, ProjectResource>(result.Resource);
             return Ok(projectResource);
         }
+
+        [HttpGet("{playListID}")]
+        public async Task<IEnumerable<ProjectResource>> GetByIdMProducer(int id)
+        {
+            var projects = await _projectService.ListByPlayListId(id);
+            var resource = _mapper.Map<IEnumerable<Project>, IEnumerable<ProjectResource>>(projects);
+            return resource;
+        }
     }
 }

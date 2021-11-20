@@ -68,6 +68,7 @@ namespace AudiMarket.Services
                 return new PayMethodResponse("Pay Method not found");
 
             existingPayMethod.Name = payMethod.Name;
+            existingPayMethod.Description = payMethod.Description;
 
             try
             {

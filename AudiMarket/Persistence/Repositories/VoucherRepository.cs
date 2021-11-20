@@ -49,9 +49,9 @@ namespace AudiMarket.Persistence.Repositories
             _context.Vouchers.Update(voucher);
         }
 
-        public Task<IEnumerable<Voucher>> GetAll()
+        public async Task<IEnumerable<Voucher>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Vouchers.ToListAsync();
         }
 
         public Task AddAsync(Voucher voucher)

@@ -8,8 +8,9 @@ namespace AudiMarket.Resources
 {
     public class SavePayMethodResource
     {
+        /*
         [Required]
-        public int IdPayMethod { get; set; }
+        public int IdPayMethod { get; set; }*/
 
         [Required]
         [MaxLength(50)]

@@ -8,7 +8,6 @@ namespace AudiMarket.Domain.Models
     public class Publication
     {
         public int Id { get; set; }
-        public int IdProject { get; set; }
         public string Description { get; set; }
         public DateTime PublicationDate { get; set; }
 
