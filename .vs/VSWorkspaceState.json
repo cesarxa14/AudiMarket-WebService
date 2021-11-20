@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AudiMarket",
+    "\\AudiMarket\\Domain",
+    "\\AudiMarket\\Domain\\Services",
+    "\\AudiMarket\\Domain\\Services\\Communications",
+    "\\AudiMarket\\obj",
+    "\\AudiMarket\\obj\\Debug",
+    "\\AudiMarket\\obj\\Release",
+    "\\AudiMarket\\Persistence",
+    "\\AudiMarket\\Persistence\\Repositories"
+  ],
+  "SelectedNode": "\\AudiMarket\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}
