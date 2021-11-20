@@ -11,7 +11,7 @@ namespace AudiMarket.Domain.Repositories
         Task<IEnumerable<PlayList>> ListAsync();
 
         Task<IEnumerable<PlayList>> GetAll();
-        Task AddPlayList(PlayList playList);
+        Task AddAsync(PlayList playList);
 
         Task<PlayList> FindById(int id);
         Task<IEnumerable<PlayList>> FindByMusicProducerId(int MProducerId);

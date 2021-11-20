@@ -46,12 +46,12 @@ namespace AudiMarket.Controllers
             Description = "Create a new music producer",
             Tags = new[] { "Music Producers" })
         ]
-        public async Task<IActionResult> PostMusicProducer([FromBody] MusicProducerResource resource)
+        public async Task<IActionResult> PostMusicProducer([FromBody] SaveMusicProducerResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var musicProducer = _mapper.Map<MusicProducerResource, MusicProducer>(resource);
+            var musicProducer = _mapper.Map<SaveMusicProducerResource, MusicProducer>(resource);
             var result = await _musicProducerService.SaveMusicProducer(musicProducer);
 
             if (!result.Success)
@@ -68,12 +68,12 @@ namespace AudiMarket.Controllers
             Description = "Update music producer's data",
             Tags = new[] { "Music Producers" })
         ]
-        public async Task<IActionResult> PutMusicProducer([SwaggerParameter("Music Producer ID")] int id, [FromBody] MusicProducerResource resource)
+        public async Task<IActionResult> PutMusicProducer([SwaggerParameter("Music Producer ID")] int id, [FromBody] SaveMusicProducerResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
-            var musicProducer = _mapper.Map<MusicProducerResource, MusicProducer>(resource);
+            var musicProducer = _mapper.Map<SaveMusicProducerResource, MusicProducer>(resource);
             var result = await _musicProducerService.UpdateMusicProducer(id, musicProducer);
 
             if (!result.Success)
@@ -93,7 +93,7 @@ namespace AudiMarket.Controllers
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _musicProducerService.DeleteMusicProducer(id);
-
+ 
             if (!result.Success)
                 return BadRequest(result.Message);
 

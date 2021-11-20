@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\AudiMarket",
-    "\\Audimarket.API.Tests",
-    "\\Audimarket.API.Tests\\bin\\Debug",
-    "\\AudiMarket\\obj\\Release\\net5.0",
-    "\\AudiMarket\\Persistence",
-    "\\AudiMarket\\Persistence\\Contexts",
-    "\\AudiMarket\\Persistence\\Repositories",
-    "\\AudiMarket\\Resources",
-    "\\AudiMarket\\Services"
+    "\\AudiMarket\\Domain",
+    "\\AudiMarket\\Domain\\Models",
+    "\\AudiMarket\\Domain\\Repositories",
+    "\\AudiMarket\\Domain\\Services",
+    "\\AudiMarket\\Domain\\Services\\Communications",
+    "\\AudiMarket\\Extensions",
+    "\\AudiMarket\\Mapping",
+    "\\AudiMarket\\Properties"
   ],
-  "SelectedNode": "\\AudiMarket\\Controllers\\MusicProducerPublications.cs",
+  "SelectedNode": "\\AudiMarket\\Domain\\Models\\PlayList.cs",
   "PreviewInSolutionExplorer": false
 }

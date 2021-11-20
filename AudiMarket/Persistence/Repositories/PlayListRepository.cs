@@ -15,7 +15,7 @@ namespace AudiMarket.Persistence.Repositories
         {
         }
 
-        public async Task AddPlayList(PlayList playList)
+        public async Task AddAsync(PlayList playList)
         {
             await _context.PlayLists.AddAsync(playList);
         }

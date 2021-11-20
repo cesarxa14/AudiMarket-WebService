@@ -46,8 +46,6 @@ namespace AudiMarket.Controllers
 
             var projectResource = _mapper.Map<Project, ProjectResource>(result.Resource);
             return Ok(projectResource);
-
-
         }
 
         [HttpPut("{id}")]

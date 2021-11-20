@@ -8,15 +8,16 @@ namespace AudiMarket.Resources
 {
     public class SavePlayListResource
     {
-        [Required]
-        public int MusicProducerId { get; set; }
-
+        
         [Required]
         [MaxLength(200)]
         public string Description { get; set; }
 
         [Required]
         public DateTime AddedDate { get; set; }
+        
+        [Required]
+        public int MusicProducerId { get; set; }
 
     }
 }

@@ -15,9 +15,11 @@ namespace AudiMarket.Services
         private readonly IMusicProducerRepository _musicProducerRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public PlayListService(IPlayListRepository playListRepository)
+        public PlayListService(IPlayListRepository playListRepository,IMusicProducerRepository musicProducerRepository,IUnitOfWork unitOfWork)
         {
             _playListRepository = playListRepository;
+            _musicProducerRepository = musicProducerRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<PlayList>> GetAll()
@@ -59,18 +61,18 @@ namespace AudiMarket.Services
 
         }
 
+        
         public async Task<PlayListResponse> SavePlayList(PlayList playList)
         {
             //Validate musicaProducerId
-            var existingMProducerId = _musicProducerRepository.FindById(playList.Id);
+            var existingMProducerId = _musicProducerRepository.FindById(playList.MusicProducerId);
 
             if (existingMProducerId == null)
                 return new PlayListResponse("Invalid Music Producer");
-
-
+            
             try
             {
-                await _playListRepository.AddPlayList(playList);
+                await _playListRepository.AddAsync(playList);
                 await _unitOfWork.CompleteAsync();
 
                 return new PlayListResponse(playList);

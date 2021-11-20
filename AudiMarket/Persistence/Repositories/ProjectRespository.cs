@@ -26,10 +26,10 @@ namespace AudiMarket.Persistence.Repositories
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<IEnumerable<Project>> FindByPlayListId(int PlayListId)
+        public async Task<IEnumerable<Project>> FindByPlayListId(int playListId)
         {
             return await _context.Projects.
-                Where(p => p.PlayListId == PlayListId)
+                Where(p => p.PlayListId == playListId)
                 .Include(p => p.PlayList).ToListAsync();
         }
 

@@ -17,7 +17,7 @@ namespace AudiMarket.Domain.Models
 
         //Relationships
         public IList<Publication> Publications { get; set; } = new List<Publication>();
-
+        //public IList<PlayList> PlayLists { get; set; } = new List<PlayList>();
 
     }
 }

@@ -47,7 +47,6 @@ namespace AudiMarket.Controllers
             var playListResource = _mapper.Map<PlayList, PlayListResource>(result.Resource);
             return Ok(playListResource);
 
-
         }
 
         [HttpPut("{id}")]
