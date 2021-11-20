@@ -36,6 +36,7 @@ C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMar
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+<<<<<<< HEAD
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.dll
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\ref\AudiMarket.dll
@@ -77,3 +78,5 @@ C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audi
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.RazorTargetAssemblyInfo.cache
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
+=======
+>>>>>>> 8f9633050124eedbdd35075968b1917572632f6b

@@ -4,7 +4,6 @@ using AudiMarket.Extensions;
 using AudiMarket.Resources;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +11,6 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Controllers
 {
-    [Produces("application/json")]
-    [ApiController]
     [Route("/api/v1/[controller]")]
     public class MusicProducersController : ControllerBase
     {
@@ -27,12 +24,6 @@ namespace AudiMarket.Controllers
         }
 
         [HttpGet]
-        [SwaggerOperation(
-            Summary = "Get all music producers", 
-            Description = "Get all music producers stored", 
-            Tags = new[] {"Music Producers"})
-        ]
-        [SwaggerResponse(200, "Music producers were found")]
         public async Task<IEnumerable<MusicProducer>> GetAllMusicProducer()
         {
             var musicProducers = await _musicProducerService.GetAll();
@@ -41,12 +32,16 @@ namespace AudiMarket.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         [SwaggerOperation(
             Summary = "Create a music producer",
             Description = "Create a new music producer",
             Tags = new[] { "Music Producers" })
         ]
         public async Task<IActionResult> PostMusicProducer([FromBody] SaveMusicProducerResource resource)
+=======
+        public async Task<IActionResult> PostMusicProducer([FromBody] MusicProducerResource resource)
+>>>>>>> 8f9633050124eedbdd35075968b1917572632f6b
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
@@ -63,12 +58,16 @@ namespace AudiMarket.Controllers
         }
 
         [HttpPut("{id}")]
+<<<<<<< HEAD
         [SwaggerOperation(
             Summary = "Update a music producer",
             Description = "Update music producer's data",
             Tags = new[] { "Music Producers" })
         ]
         public async Task<IActionResult> PutMusicProducer([SwaggerParameter("Music Producer ID")] int id, [FromBody] SaveMusicProducerResource resource)
+=======
+        public async Task<IActionResult> PutMusicProducer(int id, [FromBody] MusicProducerResource resource)
+>>>>>>> 8f9633050124eedbdd35075968b1917572632f6b
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
@@ -85,11 +84,6 @@ namespace AudiMarket.Controllers
         }
 
         [HttpDelete("{id}")]
-        [SwaggerOperation(
-            Summary = "Delete music producer",
-            Description = "Delete a music producer",
-            Tags = new[] { "Music Producers" })
-        ]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _musicProducerService.DeleteMusicProducer(id);
