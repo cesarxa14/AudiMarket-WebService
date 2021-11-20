@@ -13,8 +13,10 @@ namespace AudiMarket.Persistence.Contexts
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<MusicProducer> MusicProducers { get; set; }
+        public DbSet<VideoProducer> VideoProducers { get; set; }
 
         public DbSet<Publication> Publications { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
 
         public AppDbContext(DbContextOptions options) : base(options)
@@ -39,10 +41,21 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<MusicProducer>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<MusicProducer>().Property(p => p.Firstname).IsRequired().HasMaxLength(50);
             builder.Entity<MusicProducer>().Property(p => p.Lastname).IsRequired().HasMaxLength(50);
-            builder.Entity<MusicProducer>().Property(p => p.Dni).IsRequired().HasMaxLength(7);
+            builder.Entity<MusicProducer>().Property(p => p.Dni).IsRequired().HasMaxLength(8);
             builder.Entity<MusicProducer>().Property(p => p.Entrydate).IsRequired();
             builder.Entity<MusicProducer>().Property(p => p.User).IsRequired().HasMaxLength(15);
             builder.Entity<MusicProducer>().Property(p => p.Password).IsRequired().HasMaxLength(15);
+            
+            //Video Producer
+            builder.Entity<VideoProducer>().ToTable("MusicProducer");
+            builder.Entity<VideoProducer>().HasKey(p => p.Id);
+            builder.Entity<VideoProducer>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<VideoProducer>().Property(p => p.Firstname).IsRequired().HasMaxLength(50);
+            builder.Entity<VideoProducer>().Property(p => p.Lastname).IsRequired().HasMaxLength(50);
+            builder.Entity<VideoProducer>().Property(p => p.Dni).IsRequired().HasMaxLength(8);
+            builder.Entity<VideoProducer>().Property(p => p.Entrydate).IsRequired();
+            builder.Entity<VideoProducer>().Property(p => p.User).IsRequired().HasMaxLength(15);
+            builder.Entity<VideoProducer>().Property(p => p.Password).IsRequired().HasMaxLength(15);
 
             //Publication
             builder.Entity<Publication>().ToTable("Publication");
@@ -51,7 +64,13 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Publication>().Property(p => p.PublicationDate).IsRequired();
             
-
+            //Review
+            builder.Entity<Review>().ToTable("Review");
+            builder.Entity<Review>().HasKey(p => p.Id);
+            builder.Entity<Review>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Review>().Property(p => p.Qualification).IsRequired();
+            builder.Entity<Review>().Property(p => p.Description).IsRequired().HasMaxLength(100);
+            builder.Entity<Review>().Property(p => p.ReviewDate).IsRequired();
 
 
 
@@ -60,6 +79,7 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Category>().HasMany(p => p.Products).WithOne(p => p.Category).HasForeignKey(p => p.CategoryId);
 
             builder.Entity<MusicProducer>().HasMany(p => p.Publications).WithOne(p => p.MusicProducer).HasForeignKey(p => p.MusicProducerId);
+            builder.Entity<MusicProducer>().HasMany(p => p.Reviews).WithOne(p => p.MusicProducer).HasForeignKey(p => p.MusicProducerId);
 
             // Seed Data
             builder.Entity<Category>().HasData
@@ -74,6 +94,13 @@ namespace AudiMarket.Persistence.Contexts
                 (
                     new MusicProducer { Id = 1, Firstname = "Cesar", Lastname = "Torres", Dni = "72289050", User = "cesarxa14", Password = "1234" }
                 );
+            
+            // Video Producer
+
+            builder.Entity<VideoProducer>().HasData
+            (
+                new VideoProducer { Id = 1, Firstname = "Jorge", Lastname = "Tafur", Dni = "74582556", User = "jorgetafur", Password = "asdfg" }
+            );
 
             //Publications
 
@@ -81,6 +108,13 @@ namespace AudiMarket.Persistence.Contexts
                 (
                     new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, IdProject = 1, MusicProducerId = 1}
                 );
+            
+            //Reviews
+
+            builder.Entity<Review>().HasData
+            (
+                new Review { Id = 1, Qualification = 4.5, Description = "Hizo buen trabajo", ReviewDate = DateTime.Now, MusicProducerId = 1, VideoProducerId = 1}
+            );
 
 
 

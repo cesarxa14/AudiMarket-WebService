@@ -1053,23 +1053,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CORFAMET\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Jorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
       "projectName": "AudiMarket",
-      "projectPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj",
-      "packagesPath": "C:\\Users\\CORFAMET\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\obj\\",
+      "projectPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\CORFAMET\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

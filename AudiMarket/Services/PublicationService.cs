@@ -15,9 +15,11 @@ namespace AudiMarket.Services
         private readonly IMusicProducerRepository _musicProducerRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public PublicationService(IPublicationRepository publicationRepository)
+        public PublicationService(IPublicationRepository publicationRepository, IMusicProducerRepository musicProducerRepository, IUnitOfWork unitOfWork)
         {
             _publicationRepository = publicationRepository;
+            _musicProducerRepository = musicProducerRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<Publication>> ListAsync()
@@ -57,7 +59,7 @@ namespace AudiMarket.Services
         public async Task<PublicationResponse> SavePublication(Publication publication)
         {
             //Validate musicaProducerId
-            var existingMProducerId = _musicProducerRepository.FindById(publication.Id);
+            var existingMProducerId = _musicProducerRepository.FindById(publication.MusicProducerId);
 
             if (existingMProducerId == null)
                 return new PublicationResponse("Invalid Music Producer");

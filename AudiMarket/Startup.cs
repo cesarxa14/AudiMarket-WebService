@@ -45,11 +45,15 @@ namespace AudiMarket
 
             services.AddScoped<IMusicProducerRepository, MusicProducerRepository>();
             services.AddScoped<IMusicProducerService, MusicProducerService>();
+            
+            services.AddScoped<IVideoProducerRepository, VideoProducerRepository>();
+            services.AddScoped<IVideoProducerService, VideoProducerService>();
 
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
 
-            
+            services.AddScoped<IReviewRepository, ReviewRepository>();
+            services.AddScoped<IReviewService, ReviewService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
