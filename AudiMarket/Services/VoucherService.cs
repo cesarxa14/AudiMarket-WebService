@@ -98,7 +98,7 @@ namespace AudiMarket.Services
             }
             catch (Exception e)
             {
-                return new PublicationVoucher($"An error ocurred while updating the voucher: {e.Message}");
+                return new VoucherResponse($"An error ocurred while updating the voucher: {e.Message}");
             }
 
         }

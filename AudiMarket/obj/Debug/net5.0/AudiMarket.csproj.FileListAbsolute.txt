@@ -36,4 +36,3 @@ C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMar
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll

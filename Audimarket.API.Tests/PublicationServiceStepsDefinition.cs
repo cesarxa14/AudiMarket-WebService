@@ -30,27 +30,27 @@ namespace Audimarket.API.Tests
             _factory = factory;
         }
 
-        [Given(@"the endpoint https://localhost:(.*)/api/publications is available")]
+        [Given(@"the Endpoint https://localhost:(.*)/api/publications is available")]
         public void GivenTheEndpointHttpsLocalhostApiPublicationsIsAvailable(int port, int version)
         {
             _baseUri = new Uri($"https://localhost:{port}/api/v{version}/publications");
             _client = _factory.CreateClient(new WebApplicationFactoryClientOptions { BaseAddress = _baseUri });
         }
-        [When(@"a Post Request is sent")]
+        [When(@"a Publication Request is sent")]
         public async void WhenAPublicationRequestIsSent(Table savePublicationResource)
         {
             var resource = savePublicationResource.CreateSet<SavePublicationResource>().First();
             var content = new StringContent(resource.ToJson(), Encoding.UTF8, System.Net.Mime.MediaTypeNames.Application.Json);
             Response = await _client.PostAsync(_baseUri, content);
         }
-        [Then(@"a response with Status (.*) is received")]
+        [Then(@"A Response with Status (.*) is received")]
         public void ThenAResponseWithStatusIsReceived(int expectedStatus)
         {
             var expectedStatusCode = ((HttpStatusCode)expectedStatus).ToString();
             var actualStatusCode = Response.StatusCode.ToString();
             Assert.Equal(expectedStatusCode, actualStatusCode);
         }
-        [Then(@"a publication resource is included  in Response body")]
+        [Then(@"A Publication Resource is included  in Response Body")]
         public async void ThenAPublicationResourceIsIncludedInResponseBody(Table expectedPublicationResource)
         {
             var expectedResource = expectedPublicationResource.CreateSet<PublicationResource>().First();
