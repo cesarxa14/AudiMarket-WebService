@@ -115,3 +115,5 @@ C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audi
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.RazorTargetAssemblyInfo.cache
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
+C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\jorge\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\jorge\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete

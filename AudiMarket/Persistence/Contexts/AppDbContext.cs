@@ -16,8 +16,7 @@ namespace AudiMarket.Persistence.Contexts
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
-
-        public DbSet<MusicProducer> MusicProducers { get; set; }
+        
         public DbSet<VideoProducer> VideoProducers { get; set; }
 
         public DbSet<Publication> Publications { get; set; }
@@ -28,9 +27,7 @@ namespace AudiMarket.Persistence.Contexts
         public DbSet<Voucher> Vouchers { get; set; }
         public DbSet<PayMethod> PayMethods  { get; set; }
 
-        public DbSet<Publication> Publications { get; set; }
-        
-      
+
 
 
         public AppDbContext(DbContextOptions options) : base(options)
