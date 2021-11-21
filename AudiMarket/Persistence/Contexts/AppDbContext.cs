@@ -10,13 +10,27 @@ namespace AudiMarket.Persistence.Contexts
 {
     public class AppDbContext : DbContext
     {
+        
+        public DbSet<MusicProducer> MusicProducers { get; set; }
+        public DbSet<Project> Projects { get; set; }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+
         public DbSet<MusicProducer> MusicProducers { get; set; }
         public DbSet<VideoProducer> VideoProducers { get; set; }
 
         public DbSet<Publication> Publications { get; set; }
         public DbSet<Review> Reviews { get; set; }
+
+        public DbSet<PlayList> PlayLists { get; set; }
+
+        public DbSet<Voucher> Vouchers { get; set; }
+        public DbSet<PayMethod> PayMethods  { get; set; }
+
+        public DbSet<Publication> Publications { get; set; }
+        
+      
 
 
         public AppDbContext(DbContextOptions options) : base(options)
@@ -29,6 +43,8 @@ namespace AudiMarket.Persistence.Contexts
         {
             base.OnModelCreating(builder);
 
+            builder.Entity<PayMethod>().ToTable("PayMethod");
+            builder.Entity<PayMethod>().HasKey(p => p.IdPayMethod);
             // Constraints
             builder.Entity<Category>().ToTable("Categories");
             builder.Entity<Category>().HasKey(p => p.Id);
@@ -106,7 +122,7 @@ namespace AudiMarket.Persistence.Contexts
 
             builder.Entity<Publication>().HasData
                 (
-                    new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, IdProject = 1, MusicProducerId = 1}
+                    new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, MusicProducerId = 1}
                 );
             
             //Reviews

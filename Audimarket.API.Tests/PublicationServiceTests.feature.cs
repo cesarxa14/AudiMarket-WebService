@@ -129,28 +129,28 @@ this.FeatureBackground();
 #line 12
  testRunner.And("the second number is 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Description",
                             "MusicProducerId"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Hola",
                             "1"});
 #line 13
- testRunner.When("a Post Request is sent", ((string)(null)), table1, "When ");
+ testRunner.When("a Post Request is sent", ((string)(null)), table3, "When ");
 #line hidden
 #line 16
  testRunner.Then("A response with Status 200 is received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description",
                             "MusicProducerId"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "2",
                             "Chau",
                             "1"});
 #line 17
- testRunner.And("A publication resource is included in Response body", ((string)(null)), table2, "And ");
+ testRunner.And("A publication resource is included in Response body", ((string)(null)), table4, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

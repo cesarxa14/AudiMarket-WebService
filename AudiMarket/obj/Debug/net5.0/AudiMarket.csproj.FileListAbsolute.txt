@@ -74,3 +74,44 @@ C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\jorge\AudiMarket-WebService\AudiM
 C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\jorge\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\ref\AudiMarket.dll
 C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\jorge\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.pdb
 C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\jorge\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
+C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\ref\AudiMarket.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.pdb
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.AssemblyReference.cache
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.AssemblyInfoInputs.cache
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.AssemblyInfo.cs
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CoreCompileInputs.cache
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\appsettings.json
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.StaticWebAssets.xml
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.exe
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.deps.json
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.runtimeconfig.json
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.runtimeconfig.dev.json
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\ref\AudiMarket.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AudiMarket.pdb
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\scopedcss\bundle\AudiMarket.styles.css
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\staticwebassets\AudiMarket.StaticWebAssets.Manifest.cache
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.RazorTargetAssemblyInfo.cache
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache

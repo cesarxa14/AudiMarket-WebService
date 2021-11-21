@@ -49,17 +49,24 @@ namespace AudiMarket
             services.AddScoped<IVideoProducerRepository, VideoProducerRepository>();
             services.AddScoped<IVideoProducerService, VideoProducerService>();
 
+            services.AddScoped<IPayMethodRepository, PayMethodRepository>();
+            services.AddScoped<IPayMethodService, PayMethodService>();
+
             services.AddScoped<IPublicationRepository, PublicationRepository>();
             services.AddScoped<IPublicationService, PublicationService>();
 
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IReviewService, ReviewService>();
 
+            services.AddScoped<IVoucherRepository, VoucherRepository>();
+            services.AddScoped<IVoucherService, VoucherService>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AudiMarket", Version = "v1" });
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
         }
 
@@ -78,6 +85,7 @@ namespace AudiMarket
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseDeveloperExceptionPage();
 
             app.UseEndpoints(endpoints =>
             {

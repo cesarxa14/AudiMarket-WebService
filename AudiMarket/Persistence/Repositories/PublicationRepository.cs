@@ -26,6 +26,12 @@ namespace AudiMarket.Persistence.Repositories
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
+        public async Task<IEnumerable<Publication>> FindByIdMProducer(int id)
+        {
+            return await _context.Publications.Where(p => p.MusicProducerId == id)
+                .Include(p => p.MusicProducer).ToListAsync();
+        }
+
         public async Task<IEnumerable<Publication>> FindByMusicProducerId(int MProducerId)
         {
             return await _context.Publications.

@@ -45,6 +45,7 @@ namespace AudiMarket.Services
         }
 
 
+
         public async Task<MusicProducerResponse> SaveMusicProducer(MusicProducer musicProducer)
         {
             try
@@ -87,6 +88,9 @@ namespace AudiMarket.Services
             }
         }
 
-        
+        Task<MusicProducerResponse> IMusicProducerService.GetByUsernameAndPassword(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

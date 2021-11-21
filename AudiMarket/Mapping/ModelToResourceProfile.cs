@@ -17,6 +17,10 @@ namespace AudiMarket.Mapping
             CreateMap<VideoProducer, VideoProducerResource>();
             CreateMap<Publication, PublicationResource>();
             CreateMap<Review, ReviewResource>();
+            CreateMap<Project, ProjectResource>();
+            CreateMap<PayMethod, PayMethodResource>();
+            CreateMap<Voucher, VoucherResource>();
+            CreateMap<PlayList, PlayListResource>();
         }
     }
 }
