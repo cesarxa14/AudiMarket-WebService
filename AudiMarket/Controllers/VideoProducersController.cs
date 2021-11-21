@@ -24,11 +24,11 @@ namespace AudiMarket.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<VideoProducer>> GetAllVideoProducer()
+        public async Task<IEnumerable<VideoProducerResource>> GetAllVideoProducer()
         {
             var videoProducers = await _videoProducerService.GetAll();
             var resources = _mapper.Map<IEnumerable<VideoProducer>, IEnumerable<VideoProducerResource>>(videoProducers);
-            return videoProducers;
+            return resources;
         }
 
         [HttpPost]

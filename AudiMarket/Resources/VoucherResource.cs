@@ -8,7 +8,7 @@ namespace AudiMarket.Resources
     public class VoucherResource
     {
 
-        public int IdVoucher { get; set; }
+        public int Id { get; set; }
         public DateTime CreateDate { get; set; }
         public int IdPayMethod { get; set; }
         public int IdContract { get; set; }

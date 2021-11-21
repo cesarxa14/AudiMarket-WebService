@@ -85,7 +85,29 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Review>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Review>().Property(p => p.ReviewDate).IsRequired();
 
-
+            //Voucher
+            builder.Entity<Voucher>().ToTable("Voucher");
+            builder.Entity<Voucher>().HasKey(p => p.Id);
+            builder.Entity<Voucher>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Voucher>().Property(p => p.IdPaymethod).IsRequired();
+            builder.Entity<Voucher>().Property(p => p.ContractId).IsRequired();
+            
+            //Play List
+            builder.Entity<PlayList>().ToTable("PlayList");
+            builder.Entity<PlayList>().HasKey(p => p.Id);
+            builder.Entity<PlayList>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<PlayList>().Property(p => p.Description).IsRequired();
+            builder.Entity<PlayList>().Property(p => p.AddedDate).IsRequired();
+            builder.Entity<PlayList>().Property(p => p.MusicProducerId).IsRequired();
+            
+            //Projects
+            builder.Entity<Project>().ToTable("PlayList");
+            builder.Entity<Project>().HasKey(p => p.Id);
+            builder.Entity<Project>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Project>().Property(p => p.Description).IsRequired();
+            builder.Entity<Project>().Property(p => p.AddedDate).IsRequired();
+            builder.Entity<Project>().Property(p => p.Name).IsRequired();
+            builder.Entity<Project>().Property(p => p.PlayListId).IsRequired();
 
 
             //RelationShips
@@ -129,7 +151,33 @@ namespace AudiMarket.Persistence.Contexts
                 new Review { Id = 1, Qualification = 4.5, Description = "Hizo buen trabajo", ReviewDate = DateTime.Now, MusicProducerId = 1, VideoProducerId = 1}
             );
 
+            //Voucher
 
+            builder.Entity<Voucher>().HasData
+            (
+                new Voucher { Id = 1, IdPaymethod = 1,ContractId = 1}
+            );
+            
+            //Play List
+
+            builder.Entity<PlayList>().HasData
+            (
+                new PlayList { Id = 1, MusicProducerId = 1, Description = "buenas rolas", AddedDate = DateTime.Now}
+            );
+            
+            //Pay method
+
+            builder.Entity<PayMethod>().HasData
+            (
+                new PayMethod { IdPayMethod = 1, Description = "metodo de pago blablabla", Name = "pos visa"}
+            );
+            
+            //Project
+
+            builder.Entity<Project>().HasData
+            (
+                new Project { Id = 1, Description = "metodo de pago blablabla", Name = "pos visa", AddedDate = DateTime.Now, PlayListId = 1}
+            );
 
             //Constraints
             builder.Entity<Product>().ToTable("Products");

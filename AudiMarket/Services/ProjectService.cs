@@ -64,7 +64,7 @@ namespace AudiMarket.Services
         public async Task<ProjectResponse> SaveProject(Project project)
         {
             //Validate playListId
-            var existingplayListId = _playListRepository.FindById(project.Id);
+            var existingplayListId = _playListRepository.FindById(project.PlayListId);
 
             if (existingplayListId == null)
                 return new ProjectResponse("Invalid Play List");
@@ -87,7 +87,7 @@ namespace AudiMarket.Services
         public async Task<ProjectResponse> UpdateProject(int id, Project project)
         {
             //Validar projectId
-            var existingProject = await _projectRepository.FindById(project.Id);
+            var existingProject = await _projectRepository.FindById(id);
 
             if (existingProject == null)
                 return new ProjectResponse("Project not found");

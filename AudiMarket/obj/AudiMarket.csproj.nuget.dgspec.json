@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {}
+    "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
         "projectName": "AudiMarket",
-        "projectPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
         "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\obj\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",

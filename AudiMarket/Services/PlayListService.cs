@@ -30,7 +30,6 @@ namespace AudiMarket.Services
         public async Task<IEnumerable<PlayList>> ListAsync()
         {
             return await _playListRepository.ListAsync();
-            throw new System.NotImplementedException();
         }
 
         public async Task<IEnumerable<PlayList>> ListByMProducerId(int mProducerId)
@@ -87,7 +86,7 @@ namespace AudiMarket.Services
         public async Task<PlayListResponse> UpdatePlayList(int id, PlayList playList)
         {
             //Validar playListId
-            var existingPlayList = await _playListRepository.FindById(playList.Id);
+            var existingPlayList = await _playListRepository.FindById(id);
 
             if (existingPlayList == null)
                 return new PlayListResponse("PlayList not found");

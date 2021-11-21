@@ -1103,11 +1103,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
       "projectName": "AudiMarket",
-      "projectPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+      "projectPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
       "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\obj\\",
+      "outputPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1192,13 +1192,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\jorge\\AudiMarket-WebService\\AudiMarket\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

@@ -60,6 +60,12 @@ namespace AudiMarket
 
             services.AddScoped<IVoucherRepository, VoucherRepository>();
             services.AddScoped<IVoucherService, VoucherService>();
+            
+            services.AddScoped<IPlayListRepository, PlayListRepository>();
+            services.AddScoped<IPlayListService, PlayListService>();
+            
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IProjectService, ProjectService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));

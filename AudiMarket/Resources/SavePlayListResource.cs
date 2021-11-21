@@ -16,9 +16,9 @@ namespace AudiMarket.Resources
         [Required]
         public DateTime AddedDate { get; set; }
         
-        /*
+        
         [Required]
         public int MusicProducerId { get; set; }
-        */
+        
     }
 }

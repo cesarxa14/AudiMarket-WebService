@@ -14,15 +14,30 @@ namespace AudiMarket.Services
         private readonly IVoucherRepository _voucherRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public VoucherService(IVoucherRepository voucherRepository)
+        public VoucherService(IVoucherRepository voucherRepository, IUnitOfWork unitOfWork)
         {
             _voucherRepository = voucherRepository;
+            _unitOfWork = unitOfWork;
         }
 
 
-        public Task<VoucherResponse> DeleteVoucher(int id)
+        public async Task<VoucherResponse> DeleteVoucher(int id)
         {
-            throw new NotImplementedException();
+            var existingVoucher = await _voucherRepository.FindById(id);
+
+            if (existingVoucher == null)
+                return new VoucherResponse("Voucher not found");
+
+            try
+            {
+                _voucherRepository.Remove(existingVoucher);
+                await _unitOfWork.CompleteAsync();
+                return new VoucherResponse(existingVoucher);
+            }
+            catch (Exception e)
+            {
+                return new VoucherResponse($"An error ocurred while removing the voucher: {e.Message}");
+            }
         }
 
         public async Task<IEnumerable<Voucher>> GetAll()

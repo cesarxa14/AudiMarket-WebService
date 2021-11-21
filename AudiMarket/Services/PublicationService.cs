@@ -86,7 +86,7 @@ namespace AudiMarket.Services
         public async Task<PublicationResponse> UpdatePublication(int id, Publication publication)
         {
             //Validar publicationId
-            var existingPublication = await _publicationRepository.FindById(publication.Id);
+            var existingPublication = await _publicationRepository.FindById(id);
 
             if (existingPublication == null)
                 return new PublicationResponse("Publication not found");
