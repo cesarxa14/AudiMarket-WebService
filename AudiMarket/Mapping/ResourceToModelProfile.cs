@@ -23,6 +23,7 @@ namespace AudiMarket.Mapping
             CreateMap<SavePlayListResource, PlayList>();
             CreateMap<SaveProjectResource, Project>();
             CreateMap<SaveContractsResource,Contracts>();
+
         }
         
     }

@@ -23,6 +23,7 @@ namespace AudiMarket.Mapping
             CreateMap<Voucher, VoucherResource>();
             CreateMap<PlayList, PlayListResource>();
             CreateMap<Contracts, ContractsResource>();
+
         }
     }
 }

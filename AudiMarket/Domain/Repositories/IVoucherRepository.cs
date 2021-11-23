@@ -15,8 +15,10 @@ namespace AudiMarket.Domain.Repositories
         Task AddVoucher(Voucher voucher);
 
         Task<Voucher> FindById(int id);
+
         
         Task<IEnumerable<Voucher>> FindByContractId(int ContractId);
+
 
         void Update(Voucher voucher);
 

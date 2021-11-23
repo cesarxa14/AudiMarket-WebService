@@ -57,7 +57,11 @@ namespace AudiMarket.Services
         public async Task<IEnumerable<Voucher>> ListByContractId(int contractId)
         {
             return await _voucherRepository.ListAsync();
+
             return await _voucherRepository.FindByContractId(contractId);
+
+           // return await _voucherRepository.FindByContractId(contractId);
+
 
         }
 

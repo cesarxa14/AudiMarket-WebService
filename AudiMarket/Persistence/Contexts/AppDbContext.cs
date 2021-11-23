@@ -17,10 +17,12 @@ namespace AudiMarket.Persistence.Contexts
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         
+
         public DbSet<Contracts> Contracts { get; set; }
         
         public DbSet<Message> Message { get; set; }
         
+
         public DbSet<VideoProducer> VideoProducers { get; set; }
 
         public DbSet<Publication> Publications { get; set; }
@@ -93,7 +95,9 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Voucher>().ToTable("Voucher");
             builder.Entity<Voucher>().HasKey(p => p.Id);
             builder.Entity<Voucher>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+
             builder.Entity<Voucher>().Property(p => p.PayMethodId).IsRequired();
+
             builder.Entity<Voucher>().Property(p => p.ContractId).IsRequired();
             
             //Play List
@@ -105,7 +109,7 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<PlayList>().Property(p => p.MusicProducerId).IsRequired();
             
             //Projects
-            builder.Entity<Project>().ToTable("PlayList");
+            builder.Entity<Project>().ToTable("Project");
             builder.Entity<Project>().HasKey(p => p.Id);
             builder.Entity<Project>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Project>().Property(p => p.Description).IsRequired();
@@ -159,7 +163,9 @@ namespace AudiMarket.Persistence.Contexts
 
             builder.Entity<Voucher>().HasData
             (
+
                 new Voucher { Id = 1, PayMethodId = 1,ContractId = 1}
+
             );
             
             //Play List

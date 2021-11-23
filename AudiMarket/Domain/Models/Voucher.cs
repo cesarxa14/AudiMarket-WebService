@@ -11,11 +11,13 @@ namespace AudiMarket.Domain.Models
     {
         public int Id { get; set; }
         public DateTime CreateDate { get; set; }
+
         public int PayMethodId { get; set; }
 
         //Relationships
 
         public int ContractId { get; set; }
+
         public Contracts Contracts { get; set; }
 
     }

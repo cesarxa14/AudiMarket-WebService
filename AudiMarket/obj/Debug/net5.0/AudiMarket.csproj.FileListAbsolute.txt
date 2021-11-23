@@ -157,6 +157,7 @@ C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\develop2\AudiMarket-WebService\Au
 C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\develop2\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.pdb
 C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\develop2\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete
+<<<<<<< HEAD
 E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\appsettings.Development.json
 E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\appsettings.json
 E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.exe
@@ -197,3 +198,5 @@ E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\A
 E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\ref\AudiMarket.dll
 E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.pdb
 E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
+=======
+>>>>>>> b9ca1864f769041536e43dff921f90fab6a84dc2

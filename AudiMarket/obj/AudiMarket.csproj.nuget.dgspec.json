@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Josmar\\Documents\\Aplicaciones Web\\TF_Backend\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Josmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+        "projectName": "AudiMarket",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\Cursos\\APP_Web\\proyecto\\develop2\\AudiMarket-WebService\\AudiMarket\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> b9ca1864f769041536e43dff921f90fab6a84dc2
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

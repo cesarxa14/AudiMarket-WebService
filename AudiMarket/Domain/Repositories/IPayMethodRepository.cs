@@ -10,12 +10,14 @@ namespace AudiMarket.Domain.Repositories
     {
         Task<IEnumerable<PayMethod>> ListAsync();
 
+
         Task AddAsync(PayMethod payMethod);
 
         Task<PayMethod> FindById(int id);
 
-        void Update(PayMethod payMethod);
+        void Update(PayMethod paymethod);
 
-        void Remove(PayMethod payMethod);
+        void Remove(PayMethod paymethod);
+
     }
 }
