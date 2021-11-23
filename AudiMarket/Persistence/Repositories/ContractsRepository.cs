@@ -32,6 +32,14 @@ namespace AudiMarket.Persistence.Repositories
                 .Include(p => p.MusicProducer)
                 .ToListAsync();
         }
+        
+        public async Task<IEnumerable<Contracts>> FindByVideoProducerId(int vProducerId)
+        {
+            return await _context.Contracts.
+                Where(p => p.VideoProducerId == vProducerId)
+                .Include(p => p.VideoProducer)
+                .ToListAsync();
+        }
 
         public async Task<IEnumerable<Contracts>> ListAsync()
         {
