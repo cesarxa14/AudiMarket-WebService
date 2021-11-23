@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Resources
 {
-    public class SaveMusicProducerResource
+    public class SaveVideoProducerResource
     {
         [Required]
         [MaxLength(50)]
@@ -19,7 +19,7 @@ namespace AudiMarket.Resources
         [Required]
         [MaxLength(8)]
         public string Dni { get; set; }
-
+        
         [Required]
         [MaxLength(50)]
         public string User { get; set; }
@@ -27,5 +27,7 @@ namespace AudiMarket.Resources
         [Required]
         [MaxLength(50)]
         public string Password { get; set; }
+
+        
     }
 }

@@ -30,7 +30,8 @@ namespace AudiMarket.Persistence.Repositories
         {
             return await _context.Projects.
                 Where(p => p.PlayListId == playListId)
-                .Include(p => p.PlayList).ToListAsync();
+                .Include(p => p.PlayList)
+                .Include(p=>p.PlayList.MusicProducer).ToListAsync();
         }
 
         public async Task<IEnumerable<Project>> GetAll()
@@ -40,7 +41,8 @@ namespace AudiMarket.Persistence.Repositories
 
         public async Task<IEnumerable<Project>> ListAsync()
         {
-            return await _context.Projects.Include(p => p.PlayList).ToListAsync();
+            return await _context.Projects.Include(p => p.PlayList)
+                .Include(p=>p.PlayList.MusicProducer).ToListAsync();
         }
 
         public void Remove(Project project)

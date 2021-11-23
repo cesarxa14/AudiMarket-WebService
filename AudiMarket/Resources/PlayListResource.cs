@@ -10,7 +10,7 @@ namespace AudiMarket.Resources
         public int Id { get; set; }
         public string Description { get; set; }
         public DateTime AddedDate { get; set; }
-        //public int MusicProducerId { get; set; } 
-        //public MusicProducerResource MusicProducer { get; set; }
+        public int MusicProducerId { get; set; } 
+        public MusicProducerResource MusicProducer { get; set; }
     }
 }

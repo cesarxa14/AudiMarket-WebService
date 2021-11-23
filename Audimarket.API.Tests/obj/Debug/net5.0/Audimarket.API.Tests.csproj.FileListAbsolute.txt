@@ -415,10 +415,7 @@ C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimar
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\obj\Debug\net5.0\ref\Audimarket.API.Tests.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.pdb
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.genruntimeconfig.cache
-<<<<<<< HEAD
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.dll
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\obj\Debug\net5.0\ref\Audimarket.API.Tests.dll
 C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.pdb
-=======
->>>>>>> 8f9633050124eedbdd35075968b1917572632f6b

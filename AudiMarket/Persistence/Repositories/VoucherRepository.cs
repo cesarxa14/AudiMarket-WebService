@@ -29,14 +29,14 @@ namespace AudiMarket.Persistence.Repositories
                    */
         }
         
-        /*
+        
         public async Task<IEnumerable<Voucher>> FindByContractId(int ContractId)
         {
-            return await _context.Vouchers.
-                Where(p => p.ContractId == ContractId)
-                .Include(p => p.MusicProducer).ToListAsync();
+            return null;
+                  
+
         }
-        */
+        
         public async Task<IEnumerable<Voucher>> ListAsync()
         {
             return await _context.Vouchers.ToListAsync();

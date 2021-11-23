@@ -14,7 +14,9 @@ namespace AudiMarket.Mapping
         {
             CreateMap<SaveCategoryResource, Category>();
             CreateMap<SaveMusicProducerResource, MusicProducer>();
+            CreateMap<SaveVideoProducerResource, VideoProducer>();
             CreateMap<SavePublicationResource, Publication>();
+            CreateMap<SaveReviewResource, Review>();
             CreateMap<SavePayMethodResource, PayMethod>();
             CreateMap<SaveVoucherResource, Voucher>();
             CreateMap<SavePlayListResource, PlayList>();

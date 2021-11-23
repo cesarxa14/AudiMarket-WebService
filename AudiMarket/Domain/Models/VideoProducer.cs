@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Domain.Models
 {
-    public class MusicProducer
+    public class VideoProducer
     {
         public int Id { get; set; }
         public string Firstname { get; set; }
@@ -15,10 +15,6 @@ namespace AudiMarket.Domain.Models
         public string User { get; set; }
         public string Password { get; set; }
 
-        //Relationships
-        public IList<Publication> Publications { get; set; } = new List<Publication>();
-        public IList<Review> Reviews { get; set; } = new List<Review>();
-        //public IList<PlayList> PlayLists { get; set; } = new List<PlayList>();
 
     }
 }

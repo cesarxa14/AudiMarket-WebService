@@ -25,11 +25,11 @@ namespace AudiMarket.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<MusicProducer>> GetAllMusicProducer()
+        public async Task<IEnumerable<MusicProducerResource>> GetAllMusicProducer()
         {
             var musicProducers = await _musicProducerService.GetAll();
             var resources = _mapper.Map<IEnumerable<MusicProducer>, IEnumerable<MusicProducerResource>>(musicProducers);
-            return musicProducers;
+            return resources;
         }
 
         [HttpPost]

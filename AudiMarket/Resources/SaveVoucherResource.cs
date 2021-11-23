@@ -16,7 +16,7 @@ namespace AudiMarket.Resources
         public int IdPayMethod { get; set; }
 
         [Required]
-        public int IdContract { get; set; }
+        public int ContractId { get; set; }
 
     }
 }

@@ -3,22 +3,8 @@ build_property.TargetFramework = net5.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
-<<<<<<< HEAD
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AudiMarket
 build_property.ProjectDir = C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\AudiMarket\
-=======
-build_property.PublishSingleFile = 
-build_property.IncludeAllContentForSelfExtract = 
-build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
-<<<<<<< HEAD
-build_property.RootNamespace = AudiMarket
-build_property.ProjectDir = E:\App Web - Final\AudiMarket-WebService-master\AudiMarket-WebService\AudiMarket\
-||||||| 63b78fe
-=======
-build_property.RootNamespace = AudiMarket
-build_property.ProjectDir = e:\app web - final\audimarket-webservice-master\AudiMarket\
->>>>>>> 8f9633050124eedbdd35075968b1917572632f6b
->>>>>>> 08fb197980e7dc1a6fe8b5684a277b91d9498733

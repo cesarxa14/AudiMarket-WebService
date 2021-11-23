@@ -15,7 +15,7 @@ namespace AudiMarket.Services
         private readonly IMusicProducerRepository _musicProducerRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public PublicationService(IPublicationRepository publicationRepository,IMusicProducerRepository musicProducerRepository,IUnitOfWork unitOfWork)
+        public PublicationService(IPublicationRepository publicationRepository, IMusicProducerRepository musicProducerRepository, IUnitOfWork unitOfWork)
         {
             _publicationRepository = publicationRepository;
             _musicProducerRepository = musicProducerRepository;
@@ -86,7 +86,7 @@ namespace AudiMarket.Services
         public async Task<PublicationResponse> UpdatePublication(int id, Publication publication)
         {
             //Validar publicationId
-            var existingPublication = await _publicationRepository.FindById(publication.Id);
+            var existingPublication = await _publicationRepository.FindById(id);
 
             if (existingPublication == null)
                 return new PublicationResponse("Publication not found");
