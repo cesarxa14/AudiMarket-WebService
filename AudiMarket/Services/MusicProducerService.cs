@@ -29,19 +29,22 @@ namespace AudiMarket.Services
             _mapper = mapper;
         }
 
-        public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
+        public async Task<MusicProducer> Authenticate(AuthenticateRequest request)
         {
-            var mProducerUser = await _musicProducerRepository.FindByUsername(request.User);
+            var mProducerUser = await _musicProducerRepository.FindByUsernameAndPassword(request.User, request.Password);
             //var mProducerPassowrd = await _musicProducerRepository.FindByPassword(request.Password);
 
             //validate
-            if (mProducerUser == null || !BCryptNet.Verify(request.Password, mProducerUser.Password))
+            //if (mProducerUser == null || !BCryptNet.Verify(request.Password, mProducerUser.Password))
+            //  throw new AppException("username or password is incorrect.");
+            if (mProducerUser == null)
                 throw new AppException("username or password is incorrect.");
 
+            return mProducerUser;
             //authenticate succesful
-            var response = _mapper.Map<AuthenticateResponse>(mProducerUser);
+            /*var response = _mapper.Map<AuthenticateResponse>(mProducerUser);
             response.Token = _jwtHandler.GenerateToken(mProducerUser);
-            return response;
+            return response;*/
 
 
         }
@@ -145,9 +148,6 @@ namespace AudiMarket.Services
             }
         }
 
-        Task<MusicProducerResponse> IMusicProducerService.GetByUsernameAndPassword(string username, string password)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

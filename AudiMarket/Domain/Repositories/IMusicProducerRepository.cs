@@ -14,7 +14,7 @@ namespace AudiMarket.Domain.Repositories
 
         Task<MusicProducer> FindById(int id);
 
-        Task<MusicProducer> FindByUsername(string username);
+        Task<MusicProducer> FindByUsernameAndPassword(string username, string password);
         Task<MusicProducer> FindByPassword(string password);
 
         bool ExistsByUsername(string username);

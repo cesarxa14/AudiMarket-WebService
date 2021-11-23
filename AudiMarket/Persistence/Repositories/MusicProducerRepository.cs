@@ -34,12 +34,16 @@ namespace AudiMarket.Persistence.Repositories
         {
             return await _context.MusicProducers.SingleOrDefaultAsync(mp => mp.Password == password);
         }
-
+        /*
         public async Task<MusicProducer> FindByUsername(string username)
         {
             return await _context.MusicProducers.SingleOrDefaultAsync(mp => mp.User == username);
-        }
+        }*/
 
+        public async Task<MusicProducer> FindByUsernameAndPassword(string username, string password)
+        {
+            return await _context.MusicProducers.SingleOrDefaultAsync(mp => mp.User == username && mp.Password == password);
+        }
 
         public async Task<IEnumerable<MusicProducer>> GetAll()
         {
