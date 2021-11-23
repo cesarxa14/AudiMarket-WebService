@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Resources
 {
-    public class SaveVoucherResource
+    public class SaveContractsResource
     {
+        [Required]
+        [MaxLength(200)]
+        public string Content { get; set; }
 
         [Required]
-        public DateTime CreateDate { get; set; }
+        public int videoProducerId { get; set; }
 
         [Required]
-        public int PayMethodId { get; set; }
-
-        [Required]
-        public int ContractId { get; set; }
-
+        public int musicProducerId { get; set; }
     }
 }

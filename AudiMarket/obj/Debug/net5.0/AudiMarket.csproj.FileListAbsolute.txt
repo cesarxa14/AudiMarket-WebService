@@ -181,3 +181,45 @@ C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\develop2\AudiMarket-WebService\Au
 C:\Users\Jorge\Desktop\Cursos\APP_Web\proyecto\develop2\AudiMarket-WebService\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete
 >>>>>>> b9ca1864f769041536e43dff921f90fab6a84dc2
+||||||| b9ca186
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\appsettings.Development.json
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\appsettings.json
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.exe
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.deps.json
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.runtimeconfig.json
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.runtimeconfig.dev.json
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\ref\AudiMarket.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AudiMarket.pdb
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AutoMapper.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Humanizer.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Microsoft.OpenApi.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.AssemblyReference.cache
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.GeneratedMSBuildEditorConfig.editorconfig
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.AssemblyInfoInputs.cache
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.AssemblyInfo.cs
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CoreCompileInputs.cache
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.MvcApplicationPartsAssemblyInfo.cs
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.MvcApplicationPartsAssemblyInfo.cache
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\staticwebassets\AudiMarket.StaticWebAssets.Manifest.cache
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\staticwebassets\AudiMarket.StaticWebAssets.xml
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\scopedcss\bundle\AudiMarket.styles.css
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.RazorTargetAssemblyInfo.cache
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.csproj.CopyComplete
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\ref\AudiMarket.dll
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.pdb
+E:\App Web - Develop\AudiMarket-WebService-develop\AudiMarket\obj\Debug\net5.0\AudiMarket.genruntimeconfig.cache
+>>>>>>> 3c9bec9e88381f5782b2d3abac1ec7faacf1320a

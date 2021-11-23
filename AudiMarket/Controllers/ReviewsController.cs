@@ -77,6 +77,7 @@ namespace AudiMarket.Controllers
             var reviewResource = _mapper.Map<Review, ReviewResource>(result.Resource);
             return Ok(reviewResource);
         }
+
         /*
         [HttpGet("{musicProducerID}")]
         public async Task<IEnumerable<ReviewResource>> GetByIdMProducer(int id)
@@ -85,5 +86,6 @@ namespace AudiMarket.Controllers
             var resource = _mapper.Map<IEnumerable<Review>, IEnumerable<ReviewResource>>(revs);
             return resource;
         }*/
+
     }
 }

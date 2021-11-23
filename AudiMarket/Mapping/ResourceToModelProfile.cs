@@ -4,6 +4,7 @@ using AudiMarket.Resources;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,6 +30,8 @@ namespace AudiMarket.Mapping
             CreateMap<SaveVoucherResource, Voucher>();
             CreateMap<SavePlayListResource, PlayList>();
             CreateMap<SaveProjectResource, Project>();
+            CreateMap<SaveContractsResource,Contracts>();
+
         }
         
     }

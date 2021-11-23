@@ -117,6 +117,7 @@ namespace AudiMarket.Controllers
             return Ok(new { message = "Registration succesful" });
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

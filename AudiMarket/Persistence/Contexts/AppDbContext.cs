@@ -13,7 +13,11 @@ namespace AudiMarket.Persistence.Contexts
   
         public DbSet<Project> Projects { get; set; }
 
-  
+
+        public DbSet<Contracts> Contracts { get; set; }
+        
+        public DbSet<Message> Message { get; set; }
+        
         public DbSet<VideoProducer> VideoProducers { get; set; }
 
         public DbSet<Publication> Publications { get; set; }
@@ -90,7 +94,9 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Voucher>().ToTable("Voucher");
             builder.Entity<Voucher>().HasKey(p => p.Id);
             builder.Entity<Voucher>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Voucher>().Property(p => p.IdPaymethod).IsRequired();
+
+            builder.Entity<Voucher>().Property(p => p.PayMethodId).IsRequired();
+
             builder.Entity<Voucher>().Property(p => p.ContractId).IsRequired();
             
             //Play List
@@ -102,7 +108,7 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<PlayList>().Property(p => p.MusicProducerId).IsRequired();
             
             //Projects
-            builder.Entity<Project>().ToTable("PlayList");
+            builder.Entity<Project>().ToTable("Project");
             builder.Entity<Project>().HasKey(p => p.Id);
             builder.Entity<Project>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Project>().Property(p => p.Description).IsRequired();
@@ -124,7 +130,8 @@ namespace AudiMarket.Persistence.Contexts
 
             builder.Entity<MusicProducer>().HasData
                 (
-                    new MusicProducer { Id = 1, Firstname = "Cesar", Lastname = "Torres", Dni = "72289050", User = "cesarxa14", Password = "1234" }
+                    new MusicProducer { Id = 1, Firstname = "Cesar", Lastname = "Torres", Dni = "72243434", User = "cesarxa14", Password = "1234" },
+                    new MusicProducer { Id = 2, Firstname = "Kevin", Lastname = "Gonzales", Dni = "72289656", User = "kevin10", Password = "4321" }
                 );
             
             // Video Producer
@@ -138,7 +145,9 @@ namespace AudiMarket.Persistence.Contexts
 
             builder.Entity<Publication>().HasData
                 (
-                    new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, MusicProducerId = 1}
+                    new Publication { Id = 1, Description = "Soy experto en electronica", PublicationDate = DateTime.Now, MusicProducerId = 1},
+                    new Publication { Id = 2, Description = "Soy experto en musica clasica", PublicationDate = DateTime.Now, MusicProducerId = 1 },
+                    new Publication { Id = 3, Description = "Soy experto en techno", PublicationDate = DateTime.Now, MusicProducerId = 2 }
                 );
             
             //Reviews
@@ -148,32 +157,49 @@ namespace AudiMarket.Persistence.Contexts
                 new Review { Id = 1, Qualification = 4.5, Description = "Hizo buen trabajo", ReviewDate = DateTime.Now, MusicProducerId = 1, VideoProducerId = 1}
             );
 
+            //Contracts
+
+            builder.Entity<Contracts>().HasData(
+                new Contracts {Id = 1, MusicProducerId = 2, VideoProducerId = 1, Content = "Contrato para noviembre" }
+               );
+
             //Voucher
 
             builder.Entity<Voucher>().HasData
             (
-                new Voucher { Id = 1, IdPaymethod = 1,ContractId = 1}
+
+                new Voucher { Id = 1, PayMethodId = 1,ContractId = 1}
+
             );
             
             //Play List
 
             builder.Entity<PlayList>().HasData
             (
-                new PlayList { Id = 1, MusicProducerId = 1, Description = "buenas rolas", AddedDate = DateTime.Now}
+                new PlayList { Id = 1, MusicProducerId = 1, Description = "Buenas rolas", AddedDate = DateTime.Now},
+                new PlayList { Id = 2, MusicProducerId = 1, Description = "Eletronica", AddedDate = DateTime.Now },
+                new PlayList { Id = 3, MusicProducerId = 2, Description = "Para estudiar", AddedDate = DateTime.Now },
+                new PlayList { Id = 4, MusicProducerId = 2, Description = "Fiesta", AddedDate = DateTime.Now }
             );
             
             //Pay method
 
             builder.Entity<PayMethod>().HasData
             (
-                new PayMethod { IdPayMethod = 1, Description = "metodo de pago blablabla", Name = "pos visa"}
+                new PayMethod { IdPayMethod = 1, Description = "metodo de pago blablabla", Name = "POS Visa"},
+                new PayMethod { IdPayMethod = 2, Description = "metodo de pago 2", Name = "Efectivo" }
             );
             
             //Project
 
             builder.Entity<Project>().HasData
             (
-                new Project { Id = 1, Description = "metodo de pago blablabla", Name = "pos visa", AddedDate = DateTime.Now, PlayListId = 1}
+                new Project { Id = 1, Description = "Cover Queen", Name = "Cover", AddedDate = DateTime.Now, PlayListId = 1},
+                new Project { Id = 2, Description = "Billie Jeans", Name = "Michael Jackson", AddedDate = DateTime.Now, PlayListId = 1 },
+                new Project { Id = 3, Description = "Levels remix", Name = "Avicii", AddedDate = DateTime.Now, PlayListId = 2 },
+                new Project { Id = 4, Description = "Music relajante", Name = "Lofi music", AddedDate = DateTime.Now, PlayListId = 3 },
+                new Project { Id = 5, Description = "Musica para fiestas", Name = "Salsa cubana", AddedDate = DateTime.Now, PlayListId = 1 },
+                new Project { Id = 6, Description = "Recopilacion de merengue", Name = "Merengue", AddedDate = DateTime.Now, PlayListId = 1 }
             );
 
             //Constraints

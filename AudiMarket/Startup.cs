@@ -43,7 +43,15 @@ namespace AudiMarket
                 options.UseInMemoryDatabase("audimarket-api-in-memory");
             });
 
+
             services.AddScoped<IJwtHandler, JwtHandler>();
+
+            
+            services.AddScoped<IContractsRepository, ContractsRepository>();
+            services.AddScoped<IContractsService, ContractsService>();
+            
+            services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<IMessageService, MessageService>();
 
 
             services.AddScoped<IMusicProducerRepository, MusicProducerRepository>();
