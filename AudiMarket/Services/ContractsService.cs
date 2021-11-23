@@ -69,6 +69,7 @@ namespace AudiMarket.Services
                 return new ContractsResponse("Contract not found");
 
             existingContracts.Id = contracts.Id;
+            existingContracts.Content = contracts.Content;
 
             try
             {

@@ -93,7 +93,7 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Voucher>().ToTable("Voucher");
             builder.Entity<Voucher>().HasKey(p => p.Id);
             builder.Entity<Voucher>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Voucher>().Property(p => p.IdPayMethod).IsRequired();
+            builder.Entity<Voucher>().Property(p => p.PayMethodId).IsRequired();
             builder.Entity<Voucher>().Property(p => p.ContractId).IsRequired();
             
             //Play List
@@ -159,7 +159,7 @@ namespace AudiMarket.Persistence.Contexts
 
             builder.Entity<Voucher>().HasData
             (
-                new Voucher { Id = 1, IdPayMethod = 1,ContractId = 1}
+                new Voucher { Id = 1, PayMethodId = 1,ContractId = 1}
             );
             
             //Play List

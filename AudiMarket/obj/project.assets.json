@@ -1098,24 +1098,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pc\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Josmar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\AudiMarket.csproj",
+      "projectUniqueName": "C:\\Users\\Josmar\\Documents\\Aplicaciones Web\\TF_Backend\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
       "projectName": "AudiMarket",
-      "projectPath": "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\AudiMarket.csproj",
-      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\obj\\",
+      "projectPath": "C:\\Users\\Josmar\\Documents\\Aplicaciones Web\\TF_Backend\\AudiMarket-WebService\\AudiMarket\\AudiMarket.csproj",
+      "packagesPath": "C:\\Users\\Josmar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Josmar\\Documents\\Aplicaciones Web\\TF_Backend\\AudiMarket-WebService\\AudiMarket\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Josmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1194,7 +1189,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,6 +3,7 @@ using AudiMarket.Resources;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace AudiMarket.Mapping
             CreateMap<PayMethod, PayMethodResource>();
             CreateMap<Voucher, VoucherResource>();
             CreateMap<PlayList, PlayListResource>();
+            CreateMap<Contracts, ContractsResource>();
         }
     }
 }
