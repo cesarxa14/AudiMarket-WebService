@@ -13,6 +13,8 @@ namespace AudiMarket.Domain.Services
         Task<ContractsResponse> SaveAsync(Contracts category);
 
         Task<IEnumerable<Contracts>> ListByMProducerId(int mProducerId);
+        
+        Task<IEnumerable<Contracts>> ListByVProducerId(int vProducerId);
 
         Task<ContractsResponse> UpdateAsync(int id, Contracts category);
 

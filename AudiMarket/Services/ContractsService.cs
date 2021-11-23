@@ -50,6 +50,11 @@ namespace AudiMarket.Services
         {
             return await _contractsRepository.FindByMusicProducerId(mProducerId);
         }
+        
+        public async Task<IEnumerable<Contracts>> ListByVProducerId(int vProducerId)
+        {
+            return await _contractsRepository.FindByVideoProducerId(vProducerId);
+        }
 
         public async Task<ContractsResponse> SaveAsync(Contracts contracts)
         {

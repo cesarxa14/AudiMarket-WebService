@@ -12,6 +12,8 @@ namespace AudiMarket.Domain.Repositories
         Task AddAsync(Contracts contracts);
 
         Task<IEnumerable<Contracts>> FindByMusicProducerId(int mProducerId);
+        
+        Task<IEnumerable<Contracts>> FindByVideoProducerId(int vProducerId);
 
         Task<Contracts> FindById(int id);
 
