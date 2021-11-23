@@ -15,6 +15,8 @@ namespace AudiMarket.Persistence.Contexts
         public DbSet<MusicProducer> MusicProducers { get; set; }
 
         public DbSet<Publication> Publications { get; set; }
+        public DbSet<Message> Message { get; set; }
+        public DbSet<Contracts> Contracts { get; set; }
 
 
         public AppDbContext(DbContextOptions options) : base(options)
@@ -51,8 +53,20 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<Publication>().Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Entity<Publication>().Property(p => p.PublicationDate).IsRequired();
             
+            //Message
+            builder.Entity<Message>().ToTable("Message");
+            builder.Entity<Message>().HasKey(p => p.Id);
+            builder.Entity<Message>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Message>().Property(p => p.Content).IsRequired().HasMaxLength(200);
+            builder.Entity<Message>().Property(p => p.CreateDate).IsRequired();
+            builder.Entity<Message>().Property(p => p.IdvProducer).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Message>().Property(p => p.DmProducer).IsRequired().ValueGeneratedOnAdd();
 
-
+            //Contracts
+            builder.Entity<Contracts>().ToTable("Contract");
+            builder.Entity<Contracts>().HasKey(p => p.Id);
+            builder.Entity<Contracts>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Contracts>().Property(p => p.Content).IsRequired().HasMaxLength(200);
 
 
 
