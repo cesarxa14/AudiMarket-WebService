@@ -11,6 +11,8 @@ namespace AudiMarket.Domain.Repositories
         Task<IEnumerable<Publication>> ListAsync();
         Task AddPublication(Publication publication);
 
+        Task<IEnumerable<Publication>> FindByIdMProducer(int id);
+
         Task<Publication> FindById(int id);
         Task<IEnumerable<Publication>> FindByMusicProducerId(int MProducerId);
 

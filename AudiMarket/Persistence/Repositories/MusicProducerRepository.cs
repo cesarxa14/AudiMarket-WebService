@@ -25,6 +25,7 @@ namespace AudiMarket.Persistence.Repositories
             return await _context.MusicProducers.FindAsync(id);
         }
 
+
         public async Task<IEnumerable<MusicProducer>> GetAll()
         {
             return await _context.MusicProducers.ToListAsync();

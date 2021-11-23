@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj": {}
+    "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\AudiMarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj": {
+    "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\AudiMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj",
+        "projectUniqueName": "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\AudiMarket.csproj",
         "projectName": "AudiMarket",
-        "projectPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\AudiMarket.csproj",
-        "packagesPath": "C:\\Users\\CORFAMET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CORFAMET\\Desktop\\UPC-2021-2\\Aplicaciones Web\\backend\\AudiMarket\\AudiMarket\\obj\\",
+        "projectPath": "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\AudiMarket.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "E:\\App Web - Develop\\AudiMarket-WebService-develop\\AudiMarket\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\CORFAMET\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,6 +73,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -92,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
