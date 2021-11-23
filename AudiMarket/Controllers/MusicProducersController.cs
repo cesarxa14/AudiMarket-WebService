@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace AudiMarket.Controllers
 {
+
     [Authorize]
     [Produces("application/json")]
     [ApiController]
@@ -31,21 +32,16 @@ namespace AudiMarket.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        [SwaggerOperation(
-            Summary = "Get all music producers", 
-            Description = "Get all music producers stored", 
-            Tags = new[] {"Music Producers"})
-        ]
-        [SwaggerResponse(200, "Music producers were found")]
-        public async Task<IEnumerable<MusicProducer>> GetAllMusicProducer()
+        public async Task<IEnumerable<MusicProducerResource>> GetAllMusicProducer()
         {
             var musicProducers = await _musicProducerService.GetAll();
             var resources = _mapper.Map<IEnumerable<MusicProducer>, IEnumerable<MusicProducerResource>>(musicProducers);
-            return musicProducers;
+            return resources;
         }
 
         [AllowAnonymous]
         [HttpPost]
+        
         [SwaggerOperation(
             Summary = "Create a music producer",
             Description = "Create a new music producer",
@@ -75,6 +71,7 @@ namespace AudiMarket.Controllers
             Tags = new[] { "Music Producers" })
         ]
         public async Task<IActionResult> PutMusicProducer([SwaggerParameter("Music Producer ID")] int id, [FromBody] SaveMusicProducerResource resource)
+
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
@@ -92,15 +89,10 @@ namespace AudiMarket.Controllers
 
         [AllowAnonymous]
         [HttpDelete("{id}")]
-        [SwaggerOperation(
-            Summary = "Delete music producer",
-            Description = "Delete a music producer",
-            Tags = new[] { "Music Producers" })
-        ]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _musicProducerService.DeleteMusicProducer(id);
-
+ 
             if (!result.Success)
                 return BadRequest(result.Message);
 

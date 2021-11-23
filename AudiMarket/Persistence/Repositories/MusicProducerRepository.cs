@@ -40,6 +40,7 @@ namespace AudiMarket.Persistence.Repositories
             return await _context.MusicProducers.SingleOrDefaultAsync(mp => mp.User == username);
         }
 
+
         public async Task<IEnumerable<MusicProducer>> GetAll()
         {
             return await _context.MusicProducers.ToListAsync();

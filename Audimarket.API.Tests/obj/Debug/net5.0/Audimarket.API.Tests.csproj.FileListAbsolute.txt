@@ -416,6 +416,7 @@ C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimar
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.pdb
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.genruntimeconfig.cache
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll
+<<<<<<< HEAD
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\BCrypt.Net-Next.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\BouncyCastle.Crypto.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\K4os.Compression.LZ4.dll
@@ -432,3 +433,9 @@ C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimar
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\ZstdNet.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\MySql.EntityFrameworkCore.dll
 C:\Users\CORFAMET\Desktop\UPC-2021-2\Aplicaciones Web\backend\AudiMarket\Audimarket.API.Tests\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+||||||| 7459b47
+=======
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\obj\Debug\net5.0\ref\Audimarket.API.Tests.dll
+C:\Users\Josmar\Documents\Aplicaciones Web\TF_Backend\AudiMarket-WebService\Audimarket.API.Tests\obj\Debug\net5.0\Audimarket.API.Tests.pdb
+>>>>>>> b9ca1864f769041536e43dff921f90fab6a84dc2

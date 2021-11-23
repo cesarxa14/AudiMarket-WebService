@@ -17,9 +17,15 @@ namespace AudiMarket.Resources
         public string Lastname { get; set; }
 
         [Required]
-        [MaxLength(7)]
+        [MaxLength(8)]
         public string Dni { get; set; }
 
+        [Required]
+        [MaxLength(50)]
+        public string User { get; set; }
         
+        [Required]
+        [MaxLength(50)]
+        public string Password { get; set; }
     }
 }
