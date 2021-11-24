@@ -10,6 +10,7 @@ namespace AudiMarket.Domain.Services
     public interface IVideoProducerService
     {
         Task<IEnumerable<VideoProducer>> GetAll();
+        Task<VideoProducer> GetById(int id);
         Task<VideoProducerResponse> SaveVideoProducer(VideoProducer videoProducer);
 
         Task<VideoProducerResponse> UpdateVideoProducer(int id, VideoProducer videoProducer);

@@ -81,6 +81,13 @@ namespace AudiMarket.Services
             
         }
 
+        public Task<MusicProducer> loginAux(string username, string password)
+        {
+            var mProducer = _musicProducerRepository.loginAux(username, password);
+            if (mProducer == null) throw new KeyNotFoundException("User not found");
+            return mProducer;
+        }
+
         public async Task Register(RegisterRequest request)
         {
             //validate

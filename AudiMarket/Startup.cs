@@ -38,11 +38,13 @@ namespace AudiMarket
             services.AddCors();
             services.AddControllers();
             services.AddRouting(options => options.LowercaseUrls = true);
+            //services.AddDbContext<AppDbContext>();
+            
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseInMemoryDatabase("audimarket-api-in-memory");
             });
-
+            
 
             services.AddScoped<IJwtHandler, JwtHandler>();
 
@@ -105,14 +107,14 @@ namespace AudiMarket
             .AllowAnyMethod()
             .AllowAnyOrigin());
 
-            app.UseMiddleware<ErrorHandlerMiddleware>();
-            app.UseMiddleware<JwtMiddleware>();
+            //app.UseMiddleware<ErrorHandlerMiddleware>();
+            //app.UseMiddleware<JwtMiddleware>();
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
             app.UseDeveloperExceptionPage();
 
             app.UseEndpoints(endpoints =>

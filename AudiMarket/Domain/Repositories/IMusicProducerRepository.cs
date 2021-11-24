@@ -13,6 +13,7 @@ namespace AudiMarket.Domain.Repositories
         Task AddAsync(MusicProducer musicProducer);
 
         Task<MusicProducer> FindById(int id);
+        Task<MusicProducer> loginAux(string username, string password);
 
         Task<MusicProducer> FindByUsernameAndPassword(string username, string password);
         Task<MusicProducer> FindByPassword(string password);

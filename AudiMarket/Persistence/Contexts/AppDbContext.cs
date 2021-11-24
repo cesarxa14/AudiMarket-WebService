@@ -40,8 +40,8 @@ namespace AudiMarket.Persistence.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             builder.UseMySQL(_configuration.GetConnectionString("DefaultConnection"));
-        }
-        */
+        }*/
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -55,6 +55,9 @@ namespace AudiMarket.Persistence.Contexts
             //Music Producer
             builder.Entity<MusicProducer>().ToTable("MusicProducer");
             builder.Entity<MusicProducer>().HasKey(p => p.Id);
+
+           // builder.Entity<MusicProducer>().HasMany(p => p.Reviews).WithOne(p => p.MusicProducer).HasForeignKey(p => p.MusicProducerId);
+
             builder.Entity<MusicProducer>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<MusicProducer>().Property(p => p.Firstname).IsRequired().HasMaxLength(50);
             builder.Entity<MusicProducer>().Property(p => p.Lastname).IsRequired().HasMaxLength(50);
@@ -64,7 +67,7 @@ namespace AudiMarket.Persistence.Contexts
             builder.Entity<MusicProducer>().Property(p => p.Password).IsRequired().HasMaxLength(15);
             
             //Video Producer
-            builder.Entity<VideoProducer>().ToTable("MusicProducer");
+            builder.Entity<VideoProducer>().ToTable("VideoProducer");
             builder.Entity<VideoProducer>().HasKey(p => p.Id);
             builder.Entity<VideoProducer>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<VideoProducer>().Property(p => p.Firstname).IsRequired().HasMaxLength(50);

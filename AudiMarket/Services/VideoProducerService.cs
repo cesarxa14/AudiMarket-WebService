@@ -44,6 +44,12 @@ namespace AudiMarket.Services
             return await _videoProducerRepository.GetAll();
         }
 
+        public Task<VideoProducer> GetById(int id)
+        {
+            var vProducer = _videoProducerRepository.FindById(id);
+            if (vProducer == null) throw new KeyNotFoundException("User not found");
+            return vProducer;
+        }
 
         public async Task<VideoProducerResponse> SaveVideoProducer(VideoProducer videoProducer)
         {

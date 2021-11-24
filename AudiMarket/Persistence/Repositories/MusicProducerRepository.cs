@@ -55,6 +55,11 @@ namespace AudiMarket.Persistence.Repositories
             return await _context.MusicProducers.ToListAsync();
         }
 
+        public async Task<MusicProducer> loginAux(string username, string password)
+        {
+            return await _context.MusicProducers.SingleOrDefaultAsync(mp => mp.User == username && mp.Password == password);
+        }
+
         public void Remove(MusicProducer musicProducer)
         {
             _context.MusicProducers.Remove(musicProducer);

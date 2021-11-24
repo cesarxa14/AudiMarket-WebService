@@ -15,6 +15,8 @@ namespace AudiMarket.Domain.Services
         Task Register(RegisterRequest request);
         Task<MusicProducer> GetById(int id);
 
+        Task<MusicProducer> loginAux(string username, string password);
+
         //Task<MusicProducerResponse> GetByUsernameAndPassword(string username, string password);
         Task<MusicProducerResponse> SaveMusicProducer(MusicProducer musicProducer);
 

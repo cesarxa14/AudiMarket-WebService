@@ -77,5 +77,13 @@ namespace AudiMarket.Controllers
             return Ok(videoProducerResource);
 
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var user = await _videoProducerService.GetById(id);
+            var resource = _mapper.Map<VideoProducer, VideoProducerResource>(user);
+            return Ok(resource);
+        }
     }
 }

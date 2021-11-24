@@ -103,10 +103,12 @@ namespace AudiMarket.Controllers
 
         [AllowAnonymous]
         [HttpPost("auth/sign-in")]
-        public async Task<IActionResult> Authenticate(AuthenticateRequest request)
+        public async Task<IActionResult> Authenticate([FromBody] AuthenticateRequest request)
         {
-            var response = await _musicProducerService.Authenticate(request);
-            return Ok(response);
+            System.Diagnostics.Debug.WriteLine(request);
+            var user = await _musicProducerService.loginAux(request.User, request.Password);
+            var resource = _mapper.Map<MusicProducer, MusicProducerResource>(user);
+            return Ok(resource);
         }
 
         [AllowAnonymous]
