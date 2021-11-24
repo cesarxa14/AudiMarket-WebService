@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudiMarket", "AudiMarket\AudiMarket.csproj", "{9647CCB0-0AB1-4DD7-AA0D-DCC95802E8FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudiMarket.Tests", "AudiMarket.Tests\AudiMarket.Tests.csproj", "{6AE6B1AB-2C58-480B-84D5-F1B173DD367D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9647CCB0-0AB1-4DD7-AA0D-DCC95802E8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9647CCB0-0AB1-4DD7-AA0D-DCC95802E8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9647CCB0-0AB1-4DD7-AA0D-DCC95802E8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE6B1AB-2C58-480B-84D5-F1B173DD367D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE6B1AB-2C58-480B-84D5-F1B173DD367D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE6B1AB-2C58-480B-84D5-F1B173DD367D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE6B1AB-2C58-480B-84D5-F1B173DD367D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
